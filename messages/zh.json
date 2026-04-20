@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "catalog": "产品目录",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "shop": "在线商店",
+    "language": "语言"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "女装 · 葡萄牙批发",
+      "title": "优雅批发，化繁为简。",
+      "subtitle": "为专业零售商精选当季系列。一站齐全，品类丰富，快速交付。",
+      "ctaPrimary": "浏览目录",
+      "ctaSecondary": "在线商店"
+    },
+    "values": {
+      "title": "为何选择 HUANG'S",
+      "items": [
+        { "title": "一站齐全", "body": "欧洲合作伙伴，覆盖您整季的货品需求。" },
+        { "title": "品类丰富", "body": "数百款式，每周更新。" },
+        { "title": "快速交付", "body": "伊比利亚仓储 — 24–72 小时发货。" }
+      ]
+    },
+    "arrivals": {
+      "eyebrow": "新品上架",
+      "title": "本周上新",
+      "cta": "查看全部目录"
+    },
+    "story": {
+      "eyebrow": "品牌故事",
+      "title": "从工坊到门店，每一步都精心把关。",
+      "body": "HUANG'S 由 Lua Cintilante Unipessoal Lda 运营。我们走访工坊、甄选面料、监督每一季直到抵达您的仓库。",
+      "cta": "了解团队"
+    },
+    "shopCta": {
+      "title": "准备下单？",
+      "body": "前往在线商店查看实时库存、价格及批发条款。",
+      "cta": "前往商店"
+    }
+  },
+  "catalog": {
+    "title": "产品目录",
+    "resultCount": "共 {count} 款",
+    "filters": {
+      "title": "筛选",
+      "category": "类目",
+      "size": "尺码",
+      "color": "颜色",
+      "clearAll": "清空"
+    },
+    "empty": "未找到符合筛选条件的商品。",
+    "sort": {
+      "label": "排序",
+      "newest": "最新",
+      "featured": "推荐"
+    }
+  },
+  "product": {
+    "sku": "货号",
+    "materials": "材质",
+    "care": "保养",
+    "sizing": "尺码表",
+    "description": "产品介绍",
+    "related": "您可能也喜欢",
+    "ctaShop": "前往商店购买",
+    "ctaWholesale": "咨询批发",
+    "available": {
+      "sizes": "可选尺码",
+      "colors": "可选颜色"
+    }
+  },
+  "about": {
+    "title": "关于我们",
+    "subtitle": "有温度的时装，有方向的旅程。",
+    "timeline": {
+      "title": "里程碑"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "批发咨询、合作洽谈、展厅参观。",
+    "form": {
+      "name": "姓名",
+      "company": "公司",
+      "country": "国家",
+      "email": "邮箱",
+      "message": "留言",
+      "submit": "发送",
+      "sent": "消息已送达，我们将在一个工作日内回复。"
+    },
+    "details": {
+      "address": "地址",
+      "email": "邮箱",
+      "phone": "电话",
+      "hours": "营业时间"
+    }
+  },
+  "footer": {
+    "explore": "浏览",
+    "company": "公司",
+    "contact": "联系",
+    "follow": "关注",
+    "rights": "版权所有。"
+  }
+}

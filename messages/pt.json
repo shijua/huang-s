@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "catalog": "Catálogo",
+    "about": "Sobre",
+    "contact": "Contacto",
+    "shop": "Loja Online",
+    "language": "Idioma"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Moda feminina · Grossista em Portugal",
+      "title": "Elegância por atacado, sem complicações.",
+      "subtitle": "Selecionamos coleções em tendência para retalhistas exigentes. Uma só fonte, muita escolha, entrega rápida.",
+      "ctaPrimary": "Ver catálogo",
+      "ctaSecondary": "Loja online"
+    },
+    "values": {
+      "title": "Porquê HUANG'S",
+      "items": [
+        { "title": "Uma só fonte", "body": "Um parceiro europeu para toda a sua seleção sazonal." },
+        { "title": "Muita escolha", "body": "Centenas de referências, renovadas semanalmente." },
+        { "title": "Entrega rápida", "body": "Stock na Península — envios em 24–72 h." }
+      ]
+    },
+    "arrivals": {
+      "eyebrow": "Novidades",
+      "title": "Chegadas desta semana",
+      "cta": "Ver todo o catálogo"
+    },
+    "story": {
+      "eyebrow": "A nossa história",
+      "title": "Uma curadoria cuidada, do produtor ao retalho.",
+      "body": "HUANG'S é gerida pela Lua Cintilante Unipessoal Lda. Visitamos ateliers, selecionamos tecidos, supervisionamos cada coleção antes de chegar ao seu armazém.",
+      "cta": "Conheça-nos"
+    },
+    "shopCta": {
+      "title": "Pronto para encomendar?",
+      "body": "Aceda à nossa loja online para ver stock em tempo real, preços e condições de atacado.",
+      "cta": "Ir para a loja"
+    }
+  },
+  "catalog": {
+    "title": "Catálogo",
+    "resultCount": "{count, plural, one {# referência} other {# referências}}",
+    "filters": {
+      "title": "Filtros",
+      "category": "Categoria",
+      "size": "Tamanho",
+      "color": "Cor",
+      "clearAll": "Limpar tudo"
+    },
+    "empty": "Sem resultados para os filtros selecionados.",
+    "sort": {
+      "label": "Ordenar",
+      "newest": "Mais recentes",
+      "featured": "Em destaque"
+    }
+  },
+  "product": {
+    "sku": "SKU",
+    "materials": "Materiais",
+    "care": "Cuidados",
+    "sizing": "Guia de tamanhos",
+    "description": "Descrição",
+    "related": "Também poderá gostar",
+    "ctaShop": "Comprar na loja",
+    "ctaWholesale": "Contactar para atacado",
+    "available": {
+      "sizes": "Tamanhos disponíveis",
+      "colors": "Cores disponíveis"
+    }
+  },
+  "about": {
+    "title": "Sobre nós",
+    "subtitle": "Moda que viaja com intenção.",
+    "timeline": {
+      "title": "Marcos"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Pedidos de atacado, parcerias ou visitas ao showroom.",
+    "form": {
+      "name": "Nome",
+      "company": "Empresa",
+      "country": "País",
+      "email": "Email",
+      "message": "Mensagem",
+      "submit": "Enviar",
+      "sent": "Mensagem enviada. Responderemos em 24 h úteis."
+    },
+    "details": {
+      "address": "Morada",
+      "email": "Email",
+      "phone": "Telefone",
+      "hours": "Horário"
+    }
+  },
+  "footer": {
+    "explore": "Explorar",
+    "company": "Empresa",
+    "contact": "Contacto",
+    "follow": "Redes",
+    "rights": "Todos os direitos reservados."
+  }
+}

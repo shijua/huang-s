@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "catalog": "Catalog",
+    "about": "About",
+    "contact": "Contact",
+    "shop": "Online Store",
+    "language": "Language"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Women's fashion · Wholesale in Portugal",
+      "title": "Wholesale elegance, made simple.",
+      "subtitle": "We curate on-trend collections for discerning retailers. One source, many choices, fast delivery.",
+      "ctaPrimary": "View catalog",
+      "ctaSecondary": "Online store"
+    },
+    "values": {
+      "title": "Why HUANG'S",
+      "items": [
+        { "title": "One source", "body": "A single European partner for your full seasonal lineup." },
+        { "title": "Many choices", "body": "Hundreds of SKUs, refreshed weekly." },
+        { "title": "Fast delivery", "body": "Iberian warehousing — 24–72 h dispatch." }
+      ]
+    },
+    "arrivals": {
+      "eyebrow": "New Arrivals",
+      "title": "This week's drop",
+      "cta": "View full catalog"
+    },
+    "story": {
+      "eyebrow": "Our story",
+      "title": "Careful curation, from maker to retail.",
+      "body": "HUANG'S is operated by Lua Cintilante Unipessoal Lda. We visit ateliers, select fabrics, and oversee every collection before it reaches your floor.",
+      "cta": "Meet the team"
+    },
+    "shopCta": {
+      "title": "Ready to order?",
+      "body": "Head to our online store for live stock, pricing, and wholesale terms.",
+      "cta": "Go to store"
+    }
+  },
+  "catalog": {
+    "title": "Catalog",
+    "resultCount": "{count, plural, one {# item} other {# items}}",
+    "filters": {
+      "title": "Filters",
+      "category": "Category",
+      "size": "Size",
+      "color": "Color",
+      "clearAll": "Clear all"
+    },
+    "empty": "No results for the selected filters.",
+    "sort": {
+      "label": "Sort",
+      "newest": "Newest",
+      "featured": "Featured"
+    }
+  },
+  "product": {
+    "sku": "SKU",
+    "materials": "Materials",
+    "care": "Care",
+    "sizing": "Sizing guide",
+    "description": "Description",
+    "related": "You may also like",
+    "ctaShop": "Shop on our store",
+    "ctaWholesale": "Contact for wholesale",
+    "available": {
+      "sizes": "Available sizes",
+      "colors": "Available colors"
+    }
+  },
+  "about": {
+    "title": "About us",
+    "subtitle": "Fashion that travels with intent.",
+    "timeline": {
+      "title": "Milestones"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Wholesale enquiries, partnerships, or showroom visits.",
+    "form": {
+      "name": "Name",
+      "company": "Company",
+      "country": "Country",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send",
+      "sent": "Message sent. We'll reply within one business day."
+    },
+    "details": {
+      "address": "Address",
+      "email": "Email",
+      "phone": "Phone",
+      "hours": "Hours"
+    }
+  },
+  "footer": {
+    "explore": "Explore",
+    "company": "Company",
+    "contact": "Contact",
+    "follow": "Follow",
+    "rights": "All rights reserved."
+  }
+}

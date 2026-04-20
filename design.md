@@ -446,4 +446,466 @@ HUANG'S deliberately over-spaces rather than under-spaces. The brand's luxury po
 | `radius-md` | `4px` | Modals and larger overlay panels only |
 | `radius-full` | `9999px` | Loading spinners, avatar circles — never buttons or inputs |
 
-The system is intentionally flat-radius. The `2
+The system is intentionally flat-radius. The `2px` default is the only radius that matters in day-to-day implementation. It signals craft without mimicking skeuomorphism — a considered edge, not a rounded corner. Avoid introducing intermediate values like `6px` or `8px`; they fracture the visual grammar.
+
+---
+
+## 6. Motion & Animation
+
+### Principles
+
+HUANG'S motion philosophy mirrors its visual language: restrained, purposeful, never decorative. Animation is a tool for orientation and feedback, not spectacle. A B2B buyer navigating a catalog of 400 SKUs does not want choreography — they want immediate response and confident transitions.
+
+- **Transitions, not animations:** Elements transition between states; they do not perform entrances. Reserve keyframe-based motion for loading states and skeleton screens only.
+- **200ms is the default:** Most interactive state changes (hover, focus, active) complete in `200ms ease`.
+- **Opacity + translate for reveals:** When content appears (dropdowns, modals, tooltips), combine `opacity: 0 → 1` with `transform: translateY(-4px) → translateY(0)`.
+- **Respect prefers-reduced-motion:** Wrap all decorative transitions in `@media (prefers-reduced-motion: no-preference)`. Functional feedback (focus rings, error states) is never suppressed.
+
+### Duration Scale
+
+| Token | Duration | Applied To |
+|---|---|---|
+| `duration-fast` | `120ms` | Focus ring appearance, checkbox tick, icon swap |
+| `duration-default` | `200ms` | Button states, input borders, nav item hover |
+| `duration-medium` | `250ms` | Card hover lift, filter chip toggle |
+| `duration-slow` | `400ms` | Product image zoom on card hover |
+| `duration-enter` | `280ms` | Dropdown open, modal enter, drawer slide-in |
+| `duration-exit` | `200ms` | Dropdown close, modal exit — exits always faster than enters |
+
+### Easing Functions
+
+- **`ease`**: Default for state changes — button hover, input focus
+- **`ease-out`** (`cubic-bezier(0, 0, 0.2, 1)`): Content entering the screen — dropdowns, modals
+- **`ease-in`** (`cubic-bezier(0.4, 0, 1, 1)`): Content leaving the screen
+- **`ease-in-out`** (`cubic-bezier(0.4, 0, 0.2, 1)`): Bidirectional state transitions — accordion, tab switching
+
+### Specific Patterns
+
+**Dropdown open:** `opacity: 0 → 1` + `transform: translateY(-6px) → translateY(0)` over `280ms ease-out`
+
+**Modal enter:** Backdrop `opacity: 0 → 0.4` over `200ms ease`; panel `opacity: 0 → 1` + `transform: translateY(12px) → translateY(0)` over `280ms ease-out`
+
+**Skeleton loading pulse:**
+- `background: #E5E1D6`
+- `animation: skeleton-pulse 1.6s ease-in-out infinite`
+- Keyframes: `0%, 100% { opacity: 1 }` → `50% { opacity: 0.45 }`
+
+---
+
+## 7. Iconography
+
+### Icon System
+
+HUANG'S uses a **line-weight icon set** consistent with the typographic restraint of the system. Icons are functional wayfinding tools, never illustrative decoration. Recommended: [Lucide](https://lucide.dev/) at `1.5px` stroke weight. Avoid filled icon styles.
+
+### Sizing
+
+| Context | Size | Stroke |
+|---|---|---|
+| Inline with body text | `16px` | `1.5px` |
+| Button / navigation icon | `18px` | `1.5px` |
+| Section feature icon | `24px` | `1.5px` |
+| Empty state | `48px` | `1.5px` |
+
+### Color Rules
+
+- Default: `#4A494A` (Editorial Grey)
+- Within primary button: `#F5F2EC`
+- Active/brand context: `#3A1810`
+- Disabled: `#C8C4BB`
+
+Icons paired with text use `display: flex; align-items: center; gap: 8px`. Never use an icon without a visible label or `aria-label`.
+
+---
+
+## 8. Brand Identity & Physical Touchpoints
+
+The physical brand system extends the same four-color palette (`#3A1810`, `#E5E1D6`, `#4A494A`, `#151212`) across all tangible brand surfaces. Every print application observes the same restraint as the digital system: the mark is placed with purpose, breathing room is generous, and the beige ground reads as craft quality.
+
+### Logo Color Modes
+
+Three sanctioned logo treatments, mapped to background context:
+
+| Mode | Background | Logo Color | Notes |
+|---|---|---|---|
+| **Red + Beige** (All-Season primary) | `#E5E1D6` | `#3A1810` | Default; used year-round on all light surfaces |
+| **Grey + Beige** (FW light) | `#E5E1D6` | `#4A494A` | Autumn/Winter seasonal variant on light grounds |
+| **Black + Beige** (FW light) | `#E5E1D6` | `#151212` | Maximum contrast on light ground for FW campaigns |
+| **Black + Beige** (deep bg) | `#151212` | `#E5E1D6` | Dark ground application — ivory logo on black |
+| **Black + White** (deep bg) | `#151212` | `#FFFFFF` | Maximum contrast dark-ground version |
+
+The geometric H-mark icon and the wordmark "HUANG'S" always maintain their proportional relationship. "PORTUGAL" subtitle appears as a secondary line in `Inter`, `font-size: 11px`, `letter-spacing: 0.16em`, `text-transform: uppercase`, vertically separated from the wordmark by `6px`.
+
+### Business Card (名片)
+
+**Size:** 80 × 54mm  
+**Face:** Brand Burgundy (`#3A1810`) background; logo mark + "HUANG'S" wordmark in `#E5E1D6`  
+**Reverse:** `#E5E1D6` background; contact details in `#151212`  
+**Contact typography:** Inter, 8–9pt, `color: #151212`; address in `color: #4A494A`  
+**Finish:** Matte laminate; logo side may use spot UV on the mark
+
+### Main Label — 主麦
+
+**Size:** 25mm × 90mm  
+**Construction:** Woven fabric label  
+**Variants:**
+- **Beige ground:** `#E5E1D6` base, `#3A1810` logo — default, all-season
+- **Burgundy ground:** `#3A1810` base, `#E5E1D6` logo — premium or seasonal emphasis
+- **Grey ground:** `#4A494A` base, `#E5E1D6` logo — FW grey variant
+
+Logo mark is centered vertically; "HUANG'S" wordmark below the mark with `4mm` separation.
+
+### Hang Tags — 吊牌
+
+Multiple format sizes, all using the four-color system:
+
+| Format | Size | Primary Use |
+|---|---|---|
+| Large portrait | 80mm × 138mm | Hero product tag; full brand presentation |
+| Standard portrait | 66mm × 98mm | Standard garment tag |
+| Medium portrait | 56mm × 132mm | Slim vertical format |
+| Small square | 42mm × 56mm or 43mm × 56mm | Compact accessory tag |
+| Narrow ribbon | 20mm × 140mm | Bookmark-style or ribbon tag |
+| Wide landscape | 76mm × 114mm | Flat fold-over tag |
+| Tall narrow | 68mm × 133mm | Slim tall format |
+
+**Construction:** 350gsm+ artboard; matte laminate standard; burgundy variant uses `#3A1810` card with `#E5E1D6` print. Hang cord: burgundy wax cord (beige tags) or grey grosgrain (all variants).
+
+**Layout (large portrait, 80mm × 138mm):**
+- Top border: continuous fret-pattern decorative band in `#3A1810` / `#E5E1D6` — 12mm height
+- Center: H-mark icon, large scale (~40mm height)
+- Below mark: "HUANG'S" wordmark
+- Bottom: "PORTUGAL" subtitle
+- Reverse: blank or barcode/price zone
+
+### Size Label — 尺码麦
+
+**Size:** 30mm × 50mm  
+**Construction:** Woven  
+**Content:** H-mark icon top-center; size designation (XS / S / M / L / XL / XXL) in Inter Bold, ~18pt, centered  
+**Variants:** Beige-ground (`#E5E1D6` base, `#3A1810` mark) and grey-ground (`#4A494A` base, `#E5E1D6` mark)
+
+### Care & Composition Label — 成分麦 / 洗水麦
+
+**Size:** 40mm × 50mm  
+**Construction:** Woven satin  
+**Layout:**
+- Top: "HUANG'S" wordmark, Inter SemiBold, 7pt, `#3A1810`
+- Fiber content: e.g. "Cotton 100%", Inter Regular, 7pt
+- Care symbols row: standard ISO wash/dry/iron icons
+- Care instructions text: "Machine wash cold / 30°C Tumble dry", Inter Regular, 6pt
+- Bottom line: "Lua Cintilante Comercio Vestuario", Inter Regular, 5pt, `#9A9690`
+
+### Metal Casting — 小铸件
+
+Small cast-metal brand markers applied directly to garments:
+
+- **Rectangular plate:** ~15mm × 8mm; raised H-mark, brushed silver finish; stitched or riveted at hem or cuff
+- **Round disc:** ~18mm diameter; raised H-mark, gunmetal or silver finish; sewn to collar or shoulder seam
+- **Heart charm:** ~20mm; raised H-mark on face, gold or silver finish; suspended from hang tag cord or zipper pull
+
+All metal castings are secondary brand signals — they reinforce logo presence without replacing the woven main label.
+
+### Product Box — 产品盒
+
+**Size:** 45cm × 30cm × 8cm  
+**Colors:** `#E5E1D6` (kraft-toned board) with `#3A1810` print; or `#3A1810` board with `#E5E1D6` print  
+**Front face:** H-mark centered, "HUANG'S" below; minimal layout with generous margin  
+**Ribbon:** Branded grosgrain ribbon — burgundy variant (`#3A1810` with `#E5E1D6` repeat wordmark) or grey variant (`#4A494A` ground)
+
+### Mailer Box — 产品飞机盒
+
+**Size:** 45cm × 35cm × 8cm  
+**Construction:** Corrugated board, self-locking tuck-top  
+**Variants:**
+- **Beige:** Natural kraft board with `#3A1810` print; H-mark top-center on lid, "HUANG'S PORTUGAL" below
+- **Burgundy:** `#3A1810` board with `#E5E1D6` print
+**Side panels:** "HUANG'S" wordmark repeated in small scale
+
+### Paper Shopping Bag — 纸袋
+
+**Size:** 35cm × 32cm × 12cm  
+**Handles:** Flat grosgrain — grey (`#4A494A`) standard  
+**Variants:**
+- **Beige bag:** `#E5E1D6` art paper; H-mark + "HUANG'S" + "Lua Cintilante Unipessoal Lda" in `#3A1810`
+- **Burgundy bag:** `#3A1810` coated stock; logo in `#E5E1D6`
+**Layout:** Logo centered at ~60% of bag height from bottom; company name at ~25% from bottom in Inter, 8pt
+
+### Canvas Tote Bag — 编织袋
+
+**Size:** 21cm × 24cm × 11cm  
+**Handles:** Sewn ribbon handles — burgundy (`#3A1810`) on beige bag; grey (`#4A494A`) on red bag  
+**Variants:**
+- **Beige (米底):** Natural canvas; H-mark + "HUANG'S" in `#3A1810`; "Lua Cintilante Unipessoal Lda" at base in Inter 7pt
+- **Burgundy (红底):** `#3A1810` canvas; logo in `#E5E1D6`
+**Back face:** "HUANG'S PORTUGAL" wordmark only, bottom-center, small scale
+
+### Clear Polybag — 透明袋子
+
+**Size:** 35cm × 45cm  
+**Construction:** Frosted CPE zip-top  
+**Print:** H-mark + "HUANG'S" + "Lua Cintilante Unipessoal Lda / PORTUGAL" in `#4A494A` (Editorial Grey) — subdued against translucent ground  
+**Logo position:** Centered, ~35% from top of bag face
+
+### Sticker — 贴纸
+
+**Size:** 50mm × 50mm circular  
+**Variants:**
+- **Burgundy:** `#3A1810` ground, H-mark + "HUANG'S" in `#E5E1D6`
+- **Beige/Silver:** `#E5E1D6` or metallic silver ground, mark in `#3A1810`
+**Finish:** Gloss laminate
+
+### Staff Badge — 员工牌
+
+**Size:** 85mm × 54mm  
+**Construction:** PVC card with lanyard eyelet; housed in a card-slot lanyard holder  
+**Variants:**
+- **Black ground:** `#151212` card; H-mark + "HUANG'S" in `#E5E1D6`; "值班 / Em Serviço" role text top-right in `#E5E1D6`
+- **Burgundy ground:** `#3A1810` card; same layout in `#E5E1D6`
+**Lanyard:** Black grosgrain or burgundy grosgrain
+
+### Signage — 公司招牌
+
+**Fascia application:** Dimensional stainless-steel letters — natural brushed finish — mounted to building facade  
+**Letterforms:** "Lua Cintilante Unipessoal Lda" in Inter; "黄 氏" in the brand Chinese character form; H-mark icon as a separate dimensional piece  
+**Scale:** Mark at minimum 600mm height for exterior visibility; wordmark proportionally scaled  
+**Illumination:** Non-illuminated preferred; back-lit halo if required by building code
+
+---
+
+## 9. Seasonal Palette Variants
+
+The structural system (typography, spacing, components, grid) is constant across seasons. Only the color token layer is swapped.
+
+### All-Season — 红 + 米 (Default)
+
+The primary identity. Applied to all year-round marketing, the catalog default state, and physical touchpoints unless a seasonal override is declared.
+
+| Role | Color | Hex |
+|---|---|---|
+| Brand Primary | Brand Burgundy | `#3A1810` |
+| Canvas | Brand Beige | `#E5E1D6` |
+| Heading | Deep Charcoal | `#151212` |
+| Body | Editorial Grey | `#4A494A` |
+
+### Fall/Winter — 灰 + 米
+
+Cooler, more restrained. Applied as a seasonal campaign overlay for autumn/winter light-background contexts.
+
+| Role | All-Season | FW Grey Override |
+|---|---|---|
+| Brand Primary | `#3A1810` | `#4A494A` |
+| CTA Hover | `#5C2A1F` | `#2C2B2B` |
+| Border Emphasis | `#3A1810` | `#4A494A` |
+
+### Fall/Winter — 黑 + 米 (Light ground)
+
+Maximum editorial austerity on a light ground. Used for hero takeovers, campaign pages, seasonal product detail pages.
+
+| Role | All-Season | FW Black Override |
+|---|---|---|
+| Brand Primary | `#3A1810` | `#151212` |
+| CTA Hover | `#5C2A1F` | `#2C2B2B` |
+| Nav Active border | `#3A1810` | `#151212` |
+
+### Fall/Winter — 黑 + 米 (Dark ground)
+
+Full canvas inversion. Used for high-impact hero sections and full-page campaign takeovers.
+
+| Role | All-Season | FW Dark Override |
+|---|---|---|
+| Canvas | `#E5E1D6` | `#151212` |
+| Elevated Surface | `#F5F2EC` | `#1C1B1B` |
+| Heading | `#151212` | `#E5E1D6` |
+| Body | `#4A494A` | `#9A9690` |
+| Border Subtle | `#C8C4BB` | `#2C2B2B` |
+| Primary Button | `bg: #3A1810` | `bg: #E5E1D6; color: #151212` |
+
+### 黑 + 白 (Dark ground, maximum contrast)
+
+Pure black ground with white logo — used for the most severe editorial contexts, single-image campaigns, and print-on-dark backgrounds where beige reads as off-white.
+
+| Role | Value |
+|---|---|
+| Canvas | `#151212` |
+| Logo / Heading | `#FFFFFF` |
+| Body | `#9A9690` |
+
+---
+
+## 10. Accessibility Standards
+
+### Color Contrast (WCAG 2.1)
+
+| Pairing | Contrast | Standard |
+|---|---|---|
+| `#151212` on `#E5E1D6` | 12.6:1 | AAA |
+| `#4A494A` on `#F5F2EC` | 7.2:1 | AAA |
+| `#3A1810` on `#F5F2EC` | 13.4:1 | AAA |
+| `#F5F2EC` on `#3A1810` | 13.4:1 | AAA |
+| `#6B6764` on `#E5E1D6` | 4.7:1 | AA |
+| `#9A9690` on `#E5E1D6` | 2.9:1 | Large text only |
+
+Neutral 500 (`#9A9690`) is used **only** for non-content-bearing text: placeholders, disabled labels, decorative metadata. Never use it for content a user must read to operate the interface.
+
+### Keyboard Navigation
+
+- All interactive elements reachable via `Tab` in logical DOM order
+- Focus ring: `outline: 2px solid #3A1810; outline-offset: 2px` — never suppressed without a custom replacement
+- Skip-to-content link present on all authenticated portal pages, visible on focus
+- `Escape` always dismisses dropdowns, modals, and drawers
+- Custom components expose full ARIA roles per ARIA Authoring Practices Guide
+
+### Screen Reader Support
+
+- Icon-only buttons carry `aria-label`
+- Product images carry descriptive `alt` text
+- Tables use `<th scope="col">` headers
+- Status badges are supplemented with `<span class="sr-only">` text
+- Form errors announced via `aria-live="polite"` and linked via `aria-describedby`
+
+### Touch Targets
+
+Minimum `44×44px` on mobile viewports. Icon buttons (`40×40px` visual) receive `padding: 2px` to meet this threshold.
+
+---
+
+## 11. Page Templates
+
+### Homepage (Marketing)
+
+1. Sticky Navigation — `72px`, `z-index: 100`
+2. Hero — Full-width, `min-height: 560px`; H1 Cormorant Garamond 52px left-aligned; primary CTA; optional image right-column
+3. Brand Proposition Strip — 3-column Feature Cards ("一全 / 二多 / 三快"); `padding: 96px 0`
+4. New Arrivals Grid — H2 + 4-column product grid + CTA to full catalog
+5. Social Proof Strip — retailer logos or pull-quote in Cormorant Garamond italic
+6. Brand Story Module — full-bleed image left, text right; `padding: 96px 0`
+7. External-Store CTA — Brand Burgundy ground; ivory headline + "Shop on Our Store" secondary button (external link, `target="_blank"`)
+8. Footer — `#151212` ground, 4-column link grid + address
+
+### Catalog Page (Public, Display-Only)
+
+1. Condensed Navigation — same sticky header as homepage
+2. Page Header — Breadcrumb + H1 + result count; active filter chips below
+3. Filter Sidebar — `280px` fixed; category / size / color; clear-all ghost button
+4. Catalog Grid — 4-col desktop / 3-col tablet / 2-col mobile; product cards display imagery + name + category; entire card links to product detail
+5. Pagination — centered text navigation; Inter 13px
+
+### Product Detail Page (Public, Display-Only)
+
+1. Breadcrumb
+2. Two-column: image gallery left (60%) + info panel right (40%)
+3. Info panel: product name (H2), category tag, SKU in monospace, short description, size/color swatches (non-interactive display), "Shop on Our Store" primary button (external link) + "Contact for Wholesale" ghost button
+4. Details Accordion — description, materials, care, sizing chart
+5. Related Products Strip — H3 + 4-item scroll on mobile
+
+### About / Brand Story Page
+
+1. Hero — full-width image + Cormorant Garamond H1
+2. Narrative columns — two-column long-form copy in Inter 16px, `max-width: 720px`
+3. Values Grid — 3-column "一全 / 二多 / 三快" expanded description
+4. Timeline / milestones — vertical dated list
+5. Contact CTA — burgundy ground with wholesale enquiry email + store link
+
+### Contact Page
+
+1. Page Header — H1 + supporting copy
+2. Two-column: contact details (address, email, phone, business hours) left + enquiry form right
+3. Form fields: Name, Company, Country, Message; `submit` posts to email relay (Resend)
+4. Map embed (optional) — greyscale style
+
+---
+
+## 12. Tech Stack
+
+Implementation is optimised for a **display-first marketing + catalog site**. All purchase actions deep-link to the existing storefront — this site carries no cart, auth, or transactional database.
+
+### 12.1 Core Framework
+
+| Layer | Choice | Why |
+|---|---|---|
+| Framework | **Next.js 15 (App Router)** | Static export / ISR for catalog pages; fast SEO; `next/image` for editorial imagery; React Server Components keep bundle small |
+| Language | **TypeScript (strict)** | Type-safe product schema |
+| Styling | **Tailwind CSS v4** | Token-based; maps 1:1 to color / spacing (8px) / radius (2px) / type scales from Sections 2–5 |
+| UI Primitives | **shadcn/ui (Radix UI)** | Accessible primitives (focus rings, keyboard nav, ARIA) per Section 10 |
+| Icons | **Lucide React** | Matches 1.5px stroke weight in Section 7 |
+
+### 12.2 Content & Data
+
+| Concern | Choice | Why |
+|---|---|---|
+| Product data | **MDX / JSON files in `content/products/`** (v1) | Version-controlled, no CMS overhead; migrate to **Sanity** when non-dev editing is required |
+| Forms | **React Hook Form + Zod** | Contact / wholesale-enquiry form only |
+| Form relay | **Resend** | Enquiry email delivery |
+| Images | **`next/image` + Cloudflare R2** | AVIF/WebP, responsive sizes, EU-proximate origin |
+| Fonts | **`next/font` (self-hosted)** | Cormorant Garamond + Inter + JetBrains Mono; zero CLS |
+
+### 12.3 Internationalisation
+
+| Concern | Choice |
+|---|---|
+| i18n | **next-intl** — `/pt` (default), `/en`, `/zh` |
+| Currency | Not displayed on this site (prices live on storefront) |
+
+### 12.4 External Integrations
+
+| Concern | Choice |
+|---|---|
+| Storefront link-out | Config-driven base URL (`NEXT_PUBLIC_STORE_URL`); each product has a `storeUrl` slug |
+| Analytics | **Plausible** (GDPR-clean, cookieless) |
+| Monitoring | **Sentry** |
+
+### 12.5 Deployment
+
+| Concern | Choice |
+|---|---|
+| Hosting | **Vercel** — static + ISR, EU edge |
+| Domain | `huangs.pt` (or per registrar) |
+| Preview | Vercel preview per PR |
+
+### 12.6 Developer Experience
+
+| Concern | Choice |
+|---|---|
+| Package manager | **pnpm** |
+| Lint / format | **ESLint + Prettier + `prettier-plugin-tailwindcss`** |
+| Git hooks | **Husky + lint-staged** |
+| Testing | **Playwright** (smoke: home → catalog → product → outbound click) |
+| CI | **GitHub Actions** — lint, typecheck, preview deploy |
+
+### 12.7 Directory Structure
+
+```
+huangs/
+├── app/
+│   └── [locale]/
+│       ├── page.tsx              # homepage
+│       ├── catalog/              # /catalog, /catalog/[category]
+│       ├── products/[slug]/      # product detail
+│       ├── about/
+│       ├── contact/
+│       └── layout.tsx
+├── components/
+│   ├── ui/                       # shadcn primitives
+│   ├── brand/                    # Logo, Wordmark
+│   ├── layout/                   # SiteHeader, SiteFooter
+│   └── catalog/                  # ProductCard, FilterSidebar, ProductGallery
+├── content/
+│   └── products/                 # *.mdx or products.json
+├── lib/
+│   ├── products.ts               # read + filter product data
+│   ├── i18n/                     # next-intl config
+│   └── site.ts                   # site-wide config (store URL, contact)
+├── styles/
+│   └── tokens.css                # CSS variables from Sections 2–5
+├── messages/                     # pt.json, en.json, zh.json
+└── public/
+```
+
+### 12.8 Non-Goals (v1)
+
+- No authentication, accounts, carts, or checkout — all purchase actions redirect externally
+- No native mobile apps
+- No live chat widget
+- No multi-currency display; prices shown only on storefront
+- No custom CMS admin — MDX/JSON edits via PR

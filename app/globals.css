@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand core colors — Section 2 */
+  --color-brand-burgundy: #3a1810;
+  --color-brand-beige: #e5e1d6;
+  --color-brand-grey: #4a494a;
+  --color-brand-charcoal: #151212;
+
+  /* Surfaces & neutrals */
+  --color-canvas: #f5f2ec;
+  --color-ivory: #faf8f3;
+  --color-line: #d8d3c6;
+  --color-line-soft: #ebe6da;
+  --color-ink: #1a1414;
+  --color-ink-muted: #4a494a;
+  --color-ink-soft: #77726a;
+
+  /* Semantic */
+  --color-primary: var(--color-brand-burgundy);
+  --color-primary-fg: var(--color-ivory);
+  --color-secondary: var(--color-brand-beige);
+  --color-secondary-fg: var(--color-brand-burgundy);
+  --color-accent: var(--color-brand-grey);
+  --color-border: var(--color-line);
+  --color-muted: var(--color-line-soft);
+  --color-muted-fg: var(--color-ink-soft);
+
+  /* Typography — Section 3 */
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", "EB Garamond",
+    Georgia, serif;
+  --font-sans: var(--font-inter), Inter, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace,
+    SFMono-Regular, Menlo, monospace;
+
+  /* Radius — Section 5, intentionally flat */
+  --radius-none: 0;
+  --radius-xs: 2px;
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 4px;
+  --radius-full: 9999px;
+
+  /* Motion — Section 6 */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Container sizes */
+  --container-content: 1280px;
+  --container-prose: 720px;
+}
+
+/* Reset + base */
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.6;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+  }
+
+  h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-burgundy);
+    color: var(--color-ivory);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-burgundy);
+    outline-offset: 2px;
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  .container-content {
+    width: 100%;
+    max-width: var(--container-content);
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+
+  @media (min-width: 768px) {
+    .container-content {
+      padding-inline: 40px;
+    }
+  }
+
+  .container-prose {
+    width: 100%;
+    max-width: var(--container-prose);
+    margin-inline: auto;
+  }
+
+  .text-display {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+  }
+
+  .text-h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.25rem, 4vw, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .text-h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    line-height: 1.15;
+    letter-spacing: -0.005em;
+  }
+
+  .text-h3 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.375rem, 2vw, 1.625rem);
+    line-height: 1.2;
+  }
+
+  .text-overline {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .text-caption {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: var(--color-ink-soft);
+  }
+
+  .font-mono-sku {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .hairline {
+    border-top: 1px solid var(--color-line);
+  }
+
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      var(--color-line-soft) 0%,
+      var(--color-line) 50%,
+      var(--color-line-soft) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.6s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+}
