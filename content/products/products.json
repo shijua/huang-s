@@ -1,218 +1,314 @@
 [
   {
-    "slug": "linen-blazer-ecru",
-    "sku": "HGS-BL-001",
+    "slug": "look-01",
+    "sku": "HGS-LK-001",
     "name": {
-      "pt": "Blazer de linho Ecru",
-      "en": "Ecru Linen Blazer",
-      "zh": "本白亚麻西装外套"
-    },
-    "category": "outerwear",
-    "description": {
-      "pt": "Blazer solto de linho belga, corte relaxado com forro interior em cupro. Acabamento artesanal nas lapelas.",
-      "en": "Relaxed-fit Belgian linen blazer with a cupro lining and hand-finished lapels.",
-      "zh": "比利时亚麻宽松西装，内衬采用铜氨丝，手工修饰翻领。"
-    },
-    "materials": "68% Linen, 32% Cupro",
-    "care": "Dry clean only",
-    "colors": ["ecru", "charcoal"],
-    "sizes": ["XS", "S", "M", "L", "XL"],
-    "images": [
-      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=1200&q=80",
-      "https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=1200&q=80"
-    ],
-    "storePath": "/p/linen-blazer-ecru",
-    "isNew": true,
-    "featured": true,
-    "releasedAt": "2026-03-01"
-  },
-  {
-    "slug": "silk-slip-burgundy",
-    "sku": "HGS-DR-014",
-    "name": {
-      "pt": "Vestido de seda Borgonha",
-      "en": "Burgundy Silk Slip Dress",
-      "zh": "勃艮第红丝质吊带裙"
+      "pt": "Look 01",
+      "en": "Look 01",
+      "zh": "款式 01"
     },
     "category": "dresses",
     "description": {
-      "pt": "Vestido de corte enviesado em seda 22mm, com alças finas ajustáveis.",
-      "en": "Bias-cut 22mm silk slip with adjustable spaghetti straps.",
-      "zh": "22mm 真丝斜裁吊带裙，细肩带可调节。"
+      "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+      "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+      "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
     },
-    "materials": "100% Silk 22mm",
-    "care": "Hand wash cold",
-    "colors": ["burgundy", "champagne"],
+    "materials": "See store for details",
+    "care": "See care label",
+    "colors": ["signature"],
     "sizes": ["S", "M", "L"],
     "images": [
-      "https://images.unsplash.com/photo-1617551307578-7f5160d6615e?w=1200&q=80",
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&q=80"
+      "https://dcdn.myfashionwholesaler.com/2978/MS_017f747ef552ab76ff351d6b61d38657.jpg?x-oss-process=image/resize,w_1200/format,webp",
+      "https://dcdn.myfashionwholesaler.com/2978/MS_099fbb700b472557ecd86510c4435437.jpg?x-oss-process=image/resize,w_1200/format,webp"
     ],
-    "storePath": "/p/silk-slip-burgundy",
     "isNew": true,
     "featured": true,
-    "releasedAt": "2026-03-05"
+    "releasedAt": "2026-04-15"
   },
   {
-    "slug": "wool-trench-camel",
-    "sku": "HGS-CT-007",
+    "slug": "look-02",
+    "sku": "HGS-LK-002",
     "name": {
-      "pt": "Trench de lã Camel",
-      "en": "Camel Wool Trench",
-      "zh": "驼色羊毛风衣"
+      "pt": "Look 02",
+      "en": "Look 02",
+      "zh": "款式 02"
+    },
+    "category": "dresses",
+    "description": {
+      "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+      "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+      "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
+    },
+    "materials": "See store for details",
+    "care": "See care label",
+    "colors": ["signature"],
+    "sizes": ["S", "M", "L"],
+    "images": [
+      "https://dcdn.myfashionwholesaler.com/2978/MS_09f08813c613dafb66829316a0f8ba78.jpg?x-oss-process=image/resize,w_1200/format,webp",
+      "https://dcdn.myfashionwholesaler.com/2978/MS_0d2b851d80cc19f33c5b2820d6f1284d.jpg?x-oss-process=image/resize,w_1200/format,webp"
+    ],
+    "isNew": true,
+    "featured": true,
+    "releasedAt": "2026-04-14"
+  },
+  {
+    "slug": "look-03",
+    "sku": "HGS-LK-003",
+    "name": {
+      "pt": "Look 03",
+      "en": "Look 03",
+      "zh": "款式 03"
     },
     "category": "outerwear",
     "description": {
-      "pt": "Trench de lã dupla face, fecho em cinto de couro vegetal.",
-      "en": "Double-faced wool trench with a plant-tanned leather belt.",
-      "zh": "双面羊毛风衣，搭配植物鞣制皮革腰带。"
+      "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+      "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+      "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
     },
-    "materials": "80% Wool, 20% Cashmere",
-    "care": "Dry clean only",
-    "colors": ["camel", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+    "materials": "See store for details",
+    "care": "See care label",
+    "colors": ["signature"],
+    "sizes": ["S", "M", "L"],
     "images": [
-      "https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=1200&q=80",
-      "https://images.unsplash.com/photo-1544957992-20514f595d6f?w=1200&q=80"
+      "https://dcdn.myfashionwholesaler.com/2978/MS_10e51460be5938b2f6ed8a0413e930f0.jpg?x-oss-process=image/resize,w_1200/format,webp",
+      "https://dcdn.myfashionwholesaler.com/2978/MS_18e48efbfc28d030774f796ffa10585a.jpg?x-oss-process=image/resize,w_1200/format,webp"
     ],
-    "storePath": "/p/wool-trench-camel",
-    "isNew": false,
+    "isNew": true,
     "featured": true,
-    "releasedAt": "2026-02-10"
+    "releasedAt": "2026-04-12"
   },
   {
-    "slug": "cotton-shirt-ivory",
-    "sku": "HGS-SH-022",
+    "slug": "look-04",
+    "sku": "HGS-LK-004",
     "name": {
-      "pt": "Camisa de algodão Marfim",
-      "en": "Ivory Cotton Shirt",
-      "zh": "象牙白棉衬衫"
+      "pt": "Look 04",
+      "en": "Look 04",
+      "zh": "款式 04"
+    },
+    "category": "outerwear",
+    "description": {
+      "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+      "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+      "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
+    },
+    "materials": "See store for details",
+    "care": "See care label",
+    "colors": ["signature"],
+    "sizes": ["S", "M", "L"],
+    "images": [
+      "https://dcdn.myfashionwholesaler.com/2978/MS_1be07379d472cee8e5870b900ca90dfc.jpg?x-oss-process=image/resize,w_1200/format,webp",
+      "https://dcdn.myfashionwholesaler.com/2978/MS_22edddfeb2594a86f0b8eeef79f3beec.jpg?x-oss-process=image/resize,w_1200/format,webp"
+    ],
+    "isNew": true,
+    "featured": true,
+    "releasedAt": "2026-04-10"
+  },
+  {
+    "slug": "look-05",
+    "sku": "HGS-LK-005",
+    "name": {
+      "pt": "Look 05",
+      "en": "Look 05",
+      "zh": "款式 05"
     },
     "category": "shirts",
     "description": {
-      "pt": "Camisa estruturada em popelina de algodão egípcio, gola clássica.",
-      "en": "Crisp Egyptian-cotton poplin shirt with a classic collar.",
-      "zh": "挺括的埃及棉府绸衬衫，经典领型。"
+      "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+      "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+      "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
     },
-    "materials": "100% Egyptian cotton",
-    "care": "Machine wash cold",
-    "colors": ["ivory", "sky", "burgundy"],
-    "sizes": ["XS", "S", "M", "L", "XL"],
-    "images": [
-      "https://images.unsplash.com/photo-1598808503746-f34c53b9323e?w=1200&q=80",
-      "https://images.unsplash.com/photo-1602810316693-3667c854239a?w=1200&q=80"
-    ],
-    "storePath": "/p/cotton-shirt-ivory",
-    "isNew": true,
-    "featured": false,
-    "releasedAt": "2026-03-08"
-  },
-  {
-    "slug": "pleated-skirt-charcoal",
-    "sku": "HGS-SK-031",
-    "name": {
-      "pt": "Saia plissada Carvão",
-      "en": "Charcoal Pleated Skirt",
-      "zh": "炭灰色百褶半裙"
-    },
-    "category": "skirts",
-    "description": {
-      "pt": "Saia midi plissada em crepe reciclado, cintura elástica coberta.",
-      "en": "Pleated midi skirt in recycled crepe with a concealed elastic waist.",
-      "zh": "再生绉布中长百褶裙，隐藏式松紧腰头。"
-    },
-    "materials": "96% Recycled polyester, 4% Elastane",
-    "care": "Machine wash cold",
-    "colors": ["charcoal", "ecru"],
+    "materials": "See store for details",
+    "care": "See care label",
+    "colors": ["signature"],
     "sizes": ["XS", "S", "M", "L"],
     "images": [
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200&q=80",
-      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=1200&q=80"
+      "https://dcdn.myfashionwholesaler.com/2978/MS_2827be85b9336432e0de74c15da64078.jpg?x-oss-process=image/resize,w_1200/format,webp",
+      "https://dcdn.myfashionwholesaler.com/2978/MS_29d7ead0cbb28d406f231f921a9f2f85.jpg?x-oss-process=image/resize,w_1200/format,webp"
     ],
-    "storePath": "/p/pleated-skirt-charcoal",
-    "isNew": false,
+    "isNew": true,
     "featured": false,
-    "releasedAt": "2026-01-22"
+    "releasedAt": "2026-04-08"
   },
   {
-    "slug": "knit-cardigan-beige",
-    "sku": "HGS-KN-045",
+    "slug": "look-06",
+    "sku": "HGS-LK-006",
     "name": {
-      "pt": "Cardigan de malha Bege",
-      "en": "Beige Knit Cardigan",
-      "zh": "米色针织开衫"
+      "pt": "Look 06",
+      "en": "Look 06",
+      "zh": "款式 06"
+    },
+    "category": "shirts",
+    "description": {
+      "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+      "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+      "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
+    },
+    "materials": "See store for details",
+    "care": "See care label",
+    "colors": ["signature"],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": [
+      "https://dcdn.myfashionwholesaler.com/2978/MS_2d1634bd66ca24794596372fc6f37243.jpg?x-oss-process=image/resize,w_1200/format,webp",
+      "https://dcdn.myfashionwholesaler.com/2978/MS_33cf0a6565e085b272fe63968699ba60.jpg?x-oss-process=image/resize,w_1200/format,webp"
+    ],
+    "isNew": true,
+    "featured": false,
+    "releasedAt": "2026-04-06"
+  },
+  {
+    "slug": "look-07",
+    "sku": "HGS-LK-007",
+    "name": {
+      "pt": "Look 07",
+      "en": "Look 07",
+      "zh": "款式 07"
     },
     "category": "knitwear",
     "description": {
-      "pt": "Cardigan oversized em malha de lã merino mongol, botões em madrepérola.",
-      "en": "Oversized merino-wool cardigan with mother-of-pearl buttons.",
-      "zh": "蒙古美丽奴羊毛宽松开衫，贝母纽扣。"
+      "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+      "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+      "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
     },
-    "materials": "100% Merino wool",
-    "care": "Hand wash cold",
-    "colors": ["beige", "burgundy", "charcoal"],
+    "materials": "See store for details",
+    "care": "See care label",
+    "colors": ["signature"],
     "sizes": ["S", "M", "L"],
     "images": [
-      "https://images.unsplash.com/photo-1600661653561-629509216228?w=1200&q=80",
-      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=1200&q=80"
+      "https://dcdn.myfashionwholesaler.com/2978/MS_35948440a435d948464b1204667536aa.jpg?x-oss-process=image/resize,w_1200/format,webp",
+      "https://dcdn.myfashionwholesaler.com/2978/MS_36c94959a92c80283109282c20eb4fbd.jpg?x-oss-process=image/resize,w_1200/format,webp"
     ],
-    "storePath": "/p/knit-cardigan-beige",
     "isNew": true,
     "featured": true,
-    "releasedAt": "2026-03-10"
+    "releasedAt": "2026-04-04"
   },
   {
-    "slug": "tailored-trousers-black",
-    "sku": "HGS-TR-058",
+    "slug": "look-08",
+    "sku": "HGS-LK-008",
     "name": {
-      "pt": "Calças alfaiataria Preto",
-      "en": "Black Tailored Trousers",
-      "zh": "黑色西装裤"
+      "pt": "Look 08",
+      "en": "Look 08",
+      "zh": "款式 08"
+    },
+    "category": "knitwear",
+    "description": {
+      "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+      "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+      "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
+    },
+    "materials": "See store for details",
+    "care": "See care label",
+    "colors": ["signature"],
+    "sizes": ["S", "M", "L"],
+    "images": [
+      "https://dcdn.myfashionwholesaler.com/2978/MS_39b06f03cb2a5c3880b5b8923d91d953.jpg?x-oss-process=image/resize,w_1200/format,webp",
+      "https://dcdn.myfashionwholesaler.com/2978/MS_3d5a26d2b87e8e76169ebbe337b3b66a.jpg?x-oss-process=image/resize,w_1200/format,webp"
+    ],
+    "isNew": false,
+    "featured": false,
+    "releasedAt": "2026-04-02"
+  },
+  {
+    "slug": "look-09",
+    "sku": "HGS-LK-009",
+    "name": {
+      "pt": "Look 09",
+      "en": "Look 09",
+      "zh": "款式 09"
     },
     "category": "trousers",
     "description": {
-      "pt": "Calças de corte direito em lã italiana, vincos planchados.",
-      "en": "Straight-leg trousers in Italian wool with pressed creases.",
-      "zh": "意大利羊毛直筒裤，熨烫裤线。"
+      "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+      "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+      "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
     },
-    "materials": "98% Wool, 2% Elastane",
-    "care": "Dry clean only",
-    "colors": ["black", "charcoal"],
-    "sizes": ["XS", "S", "M", "L", "XL"],
+    "materials": "See store for details",
+    "care": "See care label",
+    "colors": ["signature"],
+    "sizes": ["S", "M", "L", "XL"],
     "images": [
-      "https://images.unsplash.com/photo-1548883354-7622d03aca27?w=1200&q=80",
-      "https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=1200&q=80"
+      "https://dcdn.myfashionwholesaler.com/2978/MS_4140d5edef2caf9beea4874067bd35de.jpg?x-oss-process=image/resize,w_1200/format,webp",
+      "https://dcdn.myfashionwholesaler.com/2978/MS_41864a5af152fba7abf28d51b7ebe3d6.jpg?x-oss-process=image/resize,w_1200/format,webp"
     ],
-    "storePath": "/p/tailored-trousers-black",
     "isNew": false,
-    "featured": false,
-    "releasedAt": "2026-02-01"
+    "featured": true,
+    "releasedAt": "2026-03-30"
   },
   {
-    "slug": "silk-scarf-floral",
-    "sku": "HGS-AC-099",
+    "slug": "look-10",
+    "sku": "HGS-LK-010",
     "name": {
-      "pt": "Lenço de seda Floral",
-      "en": "Floral Silk Scarf",
-      "zh": "花卉真丝方巾"
+      "pt": "Look 10",
+      "en": "Look 10",
+      "zh": "款式 10"
+    },
+    "category": "trousers",
+    "description": {
+      "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+      "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+      "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
+    },
+    "materials": "See store for details",
+    "care": "See care label",
+    "colors": ["signature"],
+    "sizes": ["S", "M", "L", "XL"],
+    "images": [
+      "https://dcdn.myfashionwholesaler.com/2978/MS_4326f1297e6de4e4426f8390afefc134.jpg?x-oss-process=image/resize,w_1200/format,webp",
+      "https://dcdn.myfashionwholesaler.com/2978/MS_47b2237b4b504ca97a2778d623f22fe2.jpg?x-oss-process=image/resize,w_1200/format,webp"
+    ],
+    "isNew": false,
+    "featured": false,
+    "releasedAt": "2026-03-28"
+  },
+  {
+    "slug": "look-11",
+    "sku": "HGS-LK-011",
+    "name": {
+      "pt": "Look 11",
+      "en": "Look 11",
+      "zh": "款式 11"
+    },
+    "category": "skirts",
+    "description": {
+      "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+      "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+      "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
+    },
+    "materials": "See store for details",
+    "care": "See care label",
+    "colors": ["signature"],
+    "sizes": ["S", "M", "L"],
+    "images": [
+      "https://dcdn.myfashionwholesaler.com/2978/MS_49f62267b53ecfb04b3a5af27ebfd176.jpg?x-oss-process=image/resize,w_1200/format,webp",
+      "https://dcdn.myfashionwholesaler.com/2978/MS_4c6f2fed269a0f6c513a1b711af9a18a.jpg?x-oss-process=image/resize,w_1200/format,webp"
+    ],
+    "isNew": false,
+    "featured": false,
+    "releasedAt": "2026-03-25"
+  },
+  {
+    "slug": "look-12",
+    "sku": "HGS-LK-012",
+    "name": {
+      "pt": "Look 12",
+      "en": "Look 12",
+      "zh": "款式 12"
     },
     "category": "accessories",
     "description": {
-      "pt": "Lenço quadrado 90×90 em sarja de seda impressa, bainha rolada à mão.",
-      "en": "90×90 silk-twill square with a hand-rolled hem.",
-      "zh": "90×90 真丝斜纹方巾，手工卷边。"
+      "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+      "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+      "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
     },
-    "materials": "100% Silk twill",
-    "care": "Dry clean only",
-    "colors": ["burgundy", "ivory"],
+    "materials": "See store for details",
+    "care": "See care label",
+    "colors": ["signature"],
     "sizes": ["One size"],
     "images": [
-      "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=1200&q=80",
-      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1200&q=80"
+      "https://dcdn.myfashionwholesaler.com/2978/MS_50a323d52538968a898cb8f9129bd137.jpg?x-oss-process=image/resize,w_1200/format,webp",
+      "https://dcdn.myfashionwholesaler.com/2978/MS_5143a8ad0f8d4eaad6b3a34ec8454c34.jpg?x-oss-process=image/resize,w_1200/format,webp"
     ],
-    "storePath": "/p/silk-scarf-floral",
-    "isNew": true,
+    "isNew": false,
     "featured": false,
-    "releasedAt": "2026-03-12"
+    "releasedAt": "2026-03-20"
   }
 ]

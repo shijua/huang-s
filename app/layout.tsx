@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter, JetBrains_Mono } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Inter,
+  JetBrains_Mono,
+  Noto_Sans_SC,
+} from "next/font/google";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -20,6 +25,13 @@ const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
   variable: "--font-jetbrains",
+  display: "swap",
+});
+
+const notoSansSC = Noto_Sans_SC({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-noto-sans-sc",
   display: "swap",
 });
 
@@ -47,7 +59,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      className={`${cormorant.variable} ${inter.variable} ${jetbrains.variable}`}
+      className={`${cormorant.variable} ${inter.variable} ${jetbrains.variable} ${notoSansSC.variable}`}
       suppressHydrationWarning
     >
       <body>{children}</body>

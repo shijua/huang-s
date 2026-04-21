@@ -1,11 +1,13 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/lib/i18n/routing";
 import { Wordmark } from "@/components/brand/wordmark";
 import { siteConfig } from "@/lib/site";
+import type { Locale } from "@/lib/i18n/config";
 
 export async function SiteFooter() {
   const t = await getTranslations("footer");
   const tNav = await getTranslations("nav");
+  const locale = (await getLocale()) as Locale;
   const year = new Date().getFullYear();
 
   return (
@@ -15,8 +17,10 @@ export async function SiteFooter() {
           <div>
             <Wordmark variant="ivory" />
             <p className="mt-6 max-w-xs text-[14px] leading-relaxed text-ivory/70">
-              {siteConfig.legalName} &middot; {siteConfig.address.line2},{" "}
-              {siteConfig.address.country}
+              {siteConfig.legalName} &middot;{" "}
+              {[siteConfig.address.line1, siteConfig.address.line2, siteConfig.address.country]
+                .filter(Boolean)
+                .join(", ")}
             </p>
           </div>
 
@@ -32,13 +36,21 @@ export async function SiteFooter() {
             <a href={`mailto:${siteConfig.contactEmail}`}>
               {siteConfig.contactEmail}
             </a>
-            <span>{siteConfig.phone}</span>
-            <span>{siteConfig.hours}</span>
+            <a href={siteConfig.whatsapp} target="_blank" rel="noopener noreferrer">
+              WhatsApp · {siteConfig.phone}
+            </a>
+            <span>{siteConfig.hours[locale]}</span>
           </FooterColumn>
 
           <FooterColumn title={t("follow")}>
             <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer">
               Instagram
+            </a>
+            <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer">
+              Facebook
+            </a>
+            <a href={siteConfig.social.tiktok} target="_blank" rel="noopener noreferrer">
+              TikTok
             </a>
           </FooterColumn>
         </div>
@@ -47,7 +59,7 @@ export async function SiteFooter() {
           <span>
             &copy; {year} {siteConfig.legalName}. {t("rights")}
           </span>
-          <span>NIPC 516 000 000</span>
+          <span>NIPC {siteConfig.nipc}</span>
         </div>
       </div>
     </footer>

@@ -8,3 +8,23 @@ out/
 *.log
 .vercel
 next-env.d.ts
+
+# TS incremental build cache
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Claude Code (keep shared settings.json, ignore personal)
+.claude/settings.local.json
+
+# Testing artifacts
+/coverage
+/test-results
+/playwright-report
+/playwright/.cache
+
+# Misc
+Thumbs.db

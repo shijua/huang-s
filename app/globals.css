@@ -26,11 +26,17 @@
   --color-muted: var(--color-line-soft);
   --color-muted-fg: var(--color-ink-soft);
 
-  /* Typography — Section 3 */
+  /* Typography — Section 3
+     Latin uses Cormorant (serif) / Inter (sans). CJK always falls through to
+     Noto Sans SC — editorial convention pairs a Latin serif with a CJK sans
+     because CJK serif at display sizes reads as dated. */
   --font-serif: var(--font-cormorant), "Cormorant Garamond", "EB Garamond",
-    Georgia, serif;
-  --font-sans: var(--font-inter), Inter, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", system-ui, sans-serif;
+    Georgia, var(--font-noto-sans-sc), "Noto Sans SC", "PingFang SC",
+    "Microsoft YaHei", serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, var(--font-inter), Inter,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    var(--font-noto-sans-sc), "Noto Sans SC", "PingFang SC", "Microsoft YaHei",
+    sans-serif;
   --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace,
     SFMono-Regular, Menlo, monospace;
 
@@ -123,6 +129,7 @@
     font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 1.05;
     letter-spacing: -0.015em;
+    text-wrap: balance;
   }
 
   .text-h1 {
@@ -130,6 +137,7 @@
     font-size: clamp(2.25rem, 4vw, 3.25rem);
     line-height: 1.1;
     letter-spacing: -0.01em;
+    text-wrap: balance;
   }
 
   .text-h2 {
@@ -137,6 +145,7 @@
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     line-height: 1.15;
     letter-spacing: -0.005em;
+    text-wrap: balance;
   }
 
   .text-h3 {

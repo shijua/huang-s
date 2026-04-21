@@ -23,7 +23,7 @@ export interface Product {
   colors: string[];
   sizes: string[];
   images: string[];
-  storePath: string;
+  storePath?: string;
   isNew: boolean;
   featured: boolean;
   releasedAt: string;
@@ -92,5 +92,6 @@ export function getAllColors(): string[] {
 }
 
 export function buildStoreUrl(product: Product, storeBaseUrl: string): string {
+  if (!product.storePath) return storeBaseUrl;
   return `${storeBaseUrl.replace(/\/$/, "")}${product.storePath}`;
 }

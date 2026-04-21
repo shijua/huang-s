@@ -190,6 +190,7 @@ function swatchColor(name: string): string {
     ivory: "#faf8f3",
     sky: "#bcd3de",
     beige: "#e5e1d6",
+    signature: "#3a1810",
   };
   return map[name] ?? "#ccc";
 }

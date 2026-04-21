@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactForm } from "./contact-form";
 import { siteConfig } from "@/lib/site";
 import type { Locale } from "@/lib/i18n/config";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 
 export default async function ContactPage({
   params,
@@ -34,8 +34,12 @@ export default async function ContactPage({
           >
             {siteConfig.address.line1}
             <br />
-            {siteConfig.address.line2}
-            <br />
+            {siteConfig.address.line2 && (
+              <>
+                {siteConfig.address.line2}
+                <br />
+              </>
+            )}
             {siteConfig.address.country}
           </ContactRow>
 
@@ -59,10 +63,24 @@ export default async function ContactPage({
           </ContactRow>
 
           <ContactRow
+            icon={<MessageCircle className="h-5 w-5" strokeWidth={1.5} />}
+            label="WhatsApp"
+          >
+            <a
+              href={siteConfig.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-burgundy hover:underline underline-offset-4"
+            >
+              {siteConfig.phone}
+            </a>
+          </ContactRow>
+
+          <ContactRow
             icon={<Clock className="h-5 w-5" strokeWidth={1.5} />}
             label={t("details.hours")}
           >
-            {siteConfig.hours}
+            {siteConfig.hours[locale]}
           </ContactRow>
         </div>
 
