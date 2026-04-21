@@ -22,8 +22,8 @@ export interface Product {
   name: Localized;
   category: ProductCategory;
   description: Localized;
-  materials: string;
-  care: string;
+  materials: Localized;
+  care: Localized;
   colors: string[];
   sizes: string[];
   images: string[];
@@ -34,6 +34,8 @@ export interface Product {
 }
 
 const PRODUCTS_DIR = path.join(process.cwd(), "content", "products");
+const PUBLIC_DIR = path.join(process.cwd(), "public");
+const DEFAULT_PRODUCT_IMAGE = "/brand/logo.jpg";
 const PRODUCT_CATEGORY_SET = new Set<string>(PRODUCT_CATEGORIES);
 
 function readProductFile(filePath: string): Product {
@@ -43,7 +45,26 @@ function readProductFile(filePath: string): Product {
     throw new Error(`Invalid product file: ${filePath}`);
   }
 
-  return product;
+  return {
+    ...product,
+    images: resolveProductImages(product.images ?? []),
+  };
+}
+
+function resolveProductImages(images: string[]): string[] {
+  const resolved = images.map((image) =>
+    isAvailableProductImage(image) ? image : DEFAULT_PRODUCT_IMAGE
+  );
+
+  const unique = Array.from(new Set(resolved));
+  return unique.length > 0 ? unique : [DEFAULT_PRODUCT_IMAGE];
+}
+
+function isAvailableProductImage(image: string): boolean {
+  if (!image.startsWith("/")) return true;
+  if (image === DEFAULT_PRODUCT_IMAGE) return true;
+
+  return existsSync(path.join(PUBLIC_DIR, image));
 }
 
 function loadProducts(): Product[] {

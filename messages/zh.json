@@ -61,6 +61,7 @@
     "materials": "材质",
     "care": "保养",
     "sizing": "尺码表",
+    "sizingAvailable": "可选尺码：{sizes}",
     "description": "产品介绍",
     "related": "您可能也喜欢",
     "ctaShop": "前往商店购买",
@@ -73,6 +74,7 @@
   "about": {
     "title": "关于我们",
     "subtitle": "有温度的时装，有方向的旅程。",
+    "body": "我们相信，女装批发也可以拥有设计师品牌般的标准：真实可靠的面料、细致的做工、快速的交付。HUANG'S 正是基于这份信念而来。",
     "timeline": {
       "title": "里程碑"
     }

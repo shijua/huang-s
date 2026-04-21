@@ -2,10 +2,12 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
-import { cn } from "@/lib/utils";
+import { cn, formatSize } from "@/lib/utils";
+import type { Locale } from "@/lib/i18n/config";
 import type { ProductCategory } from "@/lib/products";
 
 interface FilterSidebarProps {
+  locale: Locale;
   categories: ProductCategory[];
   sizes: string[];
   colors: string[];
@@ -32,6 +34,7 @@ const COLOR_SWATCH: Record<string, string> = {
 };
 
 export function FilterSidebar({
+  locale,
   categories,
   sizes,
   colors,
@@ -114,7 +117,7 @@ export function FilterSidebar({
               )}
               aria-pressed={activeSize === s}
             >
-              {s}
+              {formatSize(s, locale)}
             </button>
           ))}
         </div>

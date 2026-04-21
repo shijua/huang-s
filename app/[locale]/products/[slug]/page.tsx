@@ -19,7 +19,7 @@ import {
 } from "@/lib/products";
 import type { Locale } from "@/lib/i18n/config";
 import { siteConfig } from "@/lib/site";
-import { formatSku } from "@/lib/utils";
+import { formatSize, formatSku } from "@/lib/utils";
 import { ArrowUpRight, Mail } from "lucide-react";
 
 export function generateStaticParams() {
@@ -98,7 +98,7 @@ export default async function ProductPage({
                       key={s}
                       className="min-w-[44px] h-9 px-3 inline-flex items-center justify-center border border-line text-[12px] tracking-[0.08em] uppercase text-ink"
                     >
-                      {s}
+                      {formatSize(s, locale)}
                     </span>
                   ))}
                 </div>
@@ -150,16 +150,20 @@ export default async function ProductPage({
               </AccordionItem>
               <AccordionItem value="materials">
                 <AccordionTrigger>{t("materials")}</AccordionTrigger>
-                <AccordionContent>{product.materials}</AccordionContent>
+                <AccordionContent>{product.materials[locale]}</AccordionContent>
               </AccordionItem>
               <AccordionItem value="care">
                 <AccordionTrigger>{t("care")}</AccordionTrigger>
-                <AccordionContent>{product.care}</AccordionContent>
+                <AccordionContent>{product.care[locale]}</AccordionContent>
               </AccordionItem>
               <AccordionItem value="sizing">
                 <AccordionTrigger>{t("sizing")}</AccordionTrigger>
                 <AccordionContent>
-                  Available in: {product.sizes.join(" · ")}
+                  {t("sizingAvailable", {
+                    sizes: product.sizes
+                      .map((size) => formatSize(size, locale))
+                      .join(" · "),
+                  })}
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

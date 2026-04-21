@@ -61,6 +61,7 @@
     "materials": "Materials",
     "care": "Care",
     "sizing": "Sizing guide",
+    "sizingAvailable": "Available in: {sizes}",
     "description": "Description",
     "related": "You may also like",
     "ctaShop": "Shop on our store",
@@ -73,6 +74,7 @@
   "about": {
     "title": "About us",
     "subtitle": "Fashion that travels with intent.",
+    "body": "We believe wholesale fashion can be handled with the same discipline as an atelier: honest materials, careful construction, and short lead times. HUANG'S was born from that conviction.",
     "timeline": {
       "title": "Milestones"
     }

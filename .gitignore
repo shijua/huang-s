@@ -26,5 +26,9 @@ next-env.d.ts
 /playwright-report
 /playwright/.cache
 
+# Product catalog and media
+/content/products/
+/public/products/
+
 # Misc
 Thumbs.db

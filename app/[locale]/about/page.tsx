@@ -49,9 +49,7 @@ export default async function AboutPage({
             {tHome("story.body")}
           </p>
           <p className="mt-6 text-[17px] leading-relaxed text-ink-muted">
-            Acreditamos que a moda por grosso pode ser feita com a mesma
-            exigência de uma casa de autor: materiais honestos, confeção
-            cuidada, prazos curtos. HUANG&rsquo;S nasce dessa convicção.
+            {t("body")}
           </p>
         </div>
       </section>

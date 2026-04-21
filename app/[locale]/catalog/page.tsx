@@ -57,6 +57,7 @@ export default async function CatalogPage({
 
       <div className="flex flex-col gap-10 md:flex-row md:gap-12">
         <FilterSidebar
+          locale={locale}
           categories={categories}
           sizes={sizes}
           colors={colors}

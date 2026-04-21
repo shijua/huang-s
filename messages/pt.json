@@ -61,6 +61,7 @@
     "materials": "Materiais",
     "care": "Cuidados",
     "sizing": "Guia de tamanhos",
+    "sizingAvailable": "Disponível em: {sizes}",
     "description": "Descrição",
     "related": "Também poderá gostar",
     "ctaShop": "Comprar na loja",
@@ -73,6 +74,7 @@
   "about": {
     "title": "Sobre nós",
     "subtitle": "Moda que viaja com intenção.",
+    "body": "Acreditamos que a moda por grosso pode ser feita com a mesma exigência de uma casa de autor: materiais honestos, confeção cuidada, prazos curtos. HUANG'S nasce dessa convicção.",
     "timeline": {
       "title": "Marcos"
     }
