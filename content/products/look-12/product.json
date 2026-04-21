@@ -1,0 +1,30 @@
+{
+  "slug": "look-12",
+  "sku": "HGS-LK-012",
+  "name": {
+    "pt": "Look 12",
+    "en": "Look 12",
+    "zh": "款式 12"
+  },
+  "category": "accessories",
+  "description": {
+    "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+    "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+    "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
+  },
+  "materials": "See store for details",
+  "care": "See care label",
+  "colors": [
+    "signature"
+  ],
+  "sizes": [
+    "One size"
+  ],
+  "images": [
+    "/products/look-12/01.webp",
+    "/products/look-12/02.webp"
+  ],
+  "isNew": false,
+  "featured": false,
+  "releasedAt": "2026-03-20"
+}

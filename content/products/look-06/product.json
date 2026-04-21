@@ -1,0 +1,33 @@
+{
+  "slug": "look-06",
+  "sku": "HGS-LK-006",
+  "name": {
+    "pt": "Look 06",
+    "en": "Look 06",
+    "zh": "款式 06"
+  },
+  "category": "shirts",
+  "description": {
+    "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+    "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+    "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
+  },
+  "materials": "See store for details",
+  "care": "See care label",
+  "colors": [
+    "signature"
+  ],
+  "sizes": [
+    "XS",
+    "S",
+    "M",
+    "L"
+  ],
+  "images": [
+    "/products/look-06/01.webp",
+    "/products/look-06/02.webp"
+  ],
+  "isNew": true,
+  "featured": false,
+  "releasedAt": "2026-04-06"
+}

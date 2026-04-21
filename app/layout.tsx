@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import {
   Cormorant_Garamond,
-  Inter,
   JetBrains_Mono,
+  Manrope,
   Noto_Sans_SC,
 } from "next/font/google";
 import { siteConfig } from "@/lib/site";
@@ -15,9 +15,9 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-manrope",
   display: "swap",
 });
 
@@ -59,7 +59,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      className={`${cormorant.variable} ${inter.variable} ${jetbrains.variable} ${notoSansSC.variable}`}
+      className={`${cormorant.variable} ${manrope.variable} ${jetbrains.variable} ${notoSansSC.variable}`}
       suppressHydrationWarning
     >
       <body>{children}</body>

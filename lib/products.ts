@@ -1,16 +1,20 @@
-import rawProducts from "@/content/products/products.json";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
+import path from "node:path";
 import type { Locale } from "./i18n/config";
 
 export type Localized = Record<Locale, string>;
 
-export type ProductCategory =
-  | "outerwear"
-  | "dresses"
-  | "shirts"
-  | "skirts"
-  | "knitwear"
-  | "trousers"
-  | "accessories";
+export const PRODUCT_CATEGORIES = [
+  "outerwear",
+  "dresses",
+  "shirts",
+  "skirts",
+  "knitwear",
+  "trousers",
+  "accessories",
+] as const;
+
+export type ProductCategory = (typeof PRODUCT_CATEGORIES)[number];
 
 export interface Product {
   slug: string;
@@ -29,7 +33,30 @@ export interface Product {
   releasedAt: string;
 }
 
-const products = rawProducts as Product[];
+const PRODUCTS_DIR = path.join(process.cwd(), "content", "products");
+const PRODUCT_CATEGORY_SET = new Set<string>(PRODUCT_CATEGORIES);
+
+function readProductFile(filePath: string): Product {
+  const product = JSON.parse(readFileSync(filePath, "utf8")) as Product;
+
+  if (!product.slug || !PRODUCT_CATEGORY_SET.has(product.category)) {
+    throw new Error(`Invalid product file: ${filePath}`);
+  }
+
+  return product;
+}
+
+function loadProducts(): Product[] {
+  if (!existsSync(PRODUCTS_DIR)) return [];
+
+  return readdirSync(PRODUCTS_DIR, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => path.join(PRODUCTS_DIR, entry.name, "product.json"))
+    .filter((filePath) => existsSync(filePath))
+    .map(readProductFile);
+}
+
+const products = loadProducts();
 
 export function getAllProducts(): Product[] {
   return [...products].sort(
@@ -78,9 +105,8 @@ export function filterProducts(filters: CatalogFilters): Product[] {
 }
 
 export function getCategories(): ProductCategory[] {
-  return Array.from(
-    new Set(products.map((p) => p.category))
-  ) as ProductCategory[];
+  const available = new Set(products.map((p) => p.category));
+  return PRODUCT_CATEGORIES.filter((category) => available.has(category));
 }
 
 export function getAllSizes(): string[] {

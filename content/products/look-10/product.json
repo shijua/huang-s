@@ -1,0 +1,33 @@
+{
+  "slug": "look-10",
+  "sku": "HGS-LK-010",
+  "name": {
+    "pt": "Look 10",
+    "en": "Look 10",
+    "zh": "款式 10"
+  },
+  "category": "trousers",
+  "description": {
+    "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+    "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+    "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
+  },
+  "materials": "See store for details",
+  "care": "See care label",
+  "colors": [
+    "signature"
+  ],
+  "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "images": [
+    "/products/look-10/01.webp",
+    "/products/look-10/02.webp"
+  ],
+  "isNew": false,
+  "featured": false,
+  "releasedAt": "2026-03-28"
+}

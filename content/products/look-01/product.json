@@ -1,0 +1,32 @@
+{
+  "slug": "look-01",
+  "sku": "HGS-LK-001",
+  "name": {
+    "pt": "Look 01",
+    "en": "Look 01",
+    "zh": "款式 01"
+  },
+  "category": "dresses",
+  "description": {
+    "pt": "Peça selecionada da nossa coleção atual. Consulte a loja online para preço e disponibilidade por grosso.",
+    "en": "A selected piece from our current collection. See the online store for live wholesale pricing and availability.",
+    "zh": "当季精选款。前往在线商店查看实时批发价格与库存。"
+  },
+  "materials": "See store for details",
+  "care": "See care label",
+  "colors": [
+    "signature"
+  ],
+  "sizes": [
+    "S",
+    "M",
+    "L"
+  ],
+  "images": [
+    "/products/look-01/01.webp",
+    "/products/look-01/02.webp"
+  ],
+  "isNew": true,
+  "featured": true,
+  "releasedAt": "2026-04-15"
+}

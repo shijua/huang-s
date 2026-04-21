@@ -891,7 +891,7 @@ huangs/
 │   ├── layout/                   # SiteHeader, SiteFooter
 │   └── catalog/                  # ProductCard, FilterSidebar, ProductGallery
 ├── content/
-│   └── products/                 # *.mdx or products.json
+│   └── products/                 # slug/product.json; category lives in JSON
 ├── lib/
 │   ├── products.ts               # read + filter product data
 │   ├── i18n/                     # next-intl config
@@ -900,6 +900,7 @@ huangs/
 │   └── tokens.css                # CSS variables from Sections 2–5
 ├── messages/                     # pt.json, en.json, zh.json
 └── public/
+    └── products/                 # local product images by slug
 ```
 
 ### 12.8 Non-Goals (v1)
