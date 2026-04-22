@@ -6,13 +6,6 @@ import { siteConfig } from "@/lib/site";
 import type { Locale } from "@/lib/i18n/config";
 import { ArrowRight } from "lucide-react";
 
-const milestones = [
-  { year: "2021", body: { pt: "Fundação da Lua Cintilante Unipessoal Lda.", en: "Lua Cintilante Unipessoal Lda founded.", zh: "Lua Cintilante Unipessoal Lda 注册成立。" } },
-  { year: "2022", body: { pt: "Primeira coleção distribuída em Portugal.", en: "First collection distributed across Portugal.", zh: "首个系列在葡萄牙上市。" } },
-  { year: "2024", body: { pt: "Expansão para Espanha e Itália.", en: "Expanded into Spain and Italy.", zh: "业务拓展至西班牙与意大利。" } },
-  { year: "2026", body: { pt: "Lançamento da nova presença digital.", en: "Launch of the new digital presence.", zh: "全新数字化展示上线。" } },
-];
-
 export default async function AboutPage({
   params,
 }: {
@@ -32,19 +25,21 @@ export default async function AboutPage({
         <h1 className="text-display max-w-3xl">{t("subtitle")}</h1>
       </section>
 
-      <section className="relative aspect-[21/9] w-full overflow-hidden">
-        <Image
-          src={siteConfig.storefrontImageUrl}
-          alt="HUANG'S Lua Cintilante storefront in Portugal"
-          fill
-          priority
-          quality={70}
-          sizes="100vw"
-          className="object-cover"
-        />
+      <section className="container-content pb-20 md:pb-24">
+        <div className="relative aspect-[16/7] max-h-[460px] w-full overflow-hidden">
+          <Image
+            src={siteConfig.storefrontImageUrl}
+            alt="HUANG'S Lua Cintilante storefront in Portugal"
+            fill
+            priority
+            quality={70}
+            sizes="(max-width: 1440px) calc(100vw - 96px), 1320px"
+            className="object-cover"
+          />
+        </div>
       </section>
 
-      <section className="container-content py-24">
+      <section className="container-content pb-24">
         <div className="container-prose">
           <p className="text-[17px] leading-relaxed text-ink-muted">
             {tHome("story.body")}
@@ -74,19 +69,24 @@ export default async function AboutPage({
       </section>
 
       <section className="container-content py-24">
-        <h2 className="text-h2 mb-12">{t("timeline.title")}</h2>
+        <h2 className="text-h2 mb-12">{t("focus.title")}</h2>
         <ol className="divide-y divide-line">
-          {milestones.map((m) => (
+          {["0", "1", "2"].map((i) => (
             <li
-              key={m.year}
+              key={i}
               className="grid grid-cols-[120px_1fr] gap-6 py-6 items-baseline"
             >
               <span className="font-serif text-[28px] text-brand-burgundy leading-none">
-                {m.year}
+                0{Number(i) + 1}
               </span>
-              <p className="text-[16px] text-ink-muted leading-relaxed">
-                {m.body[locale]}
-              </p>
+              <div>
+                <h3 className="text-[17px] font-medium text-ink">
+                  {t(`focus.items.${i}.title`)}
+                </h3>
+                <p className="mt-2 text-[16px] text-ink-muted leading-relaxed">
+                  {t(`focus.items.${i}.body`)}
+                </p>
+              </div>
             </li>
           ))}
         </ol>

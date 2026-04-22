@@ -1,5 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ContactForm } from "./contact-form";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site";
 import type { Locale } from "@/lib/i18n/config";
 import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
@@ -25,7 +25,7 @@ export default async function ContactPage({
         </p>
       </div>
 
-      <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-20">
+      <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         {/* Details */}
         <div className="space-y-10">
           <ContactRow
@@ -89,19 +89,14 @@ export default async function ContactPage({
           </ContactRow>
         </div>
 
-        {/* Form */}
-        <div className="bg-ivory border border-line p-8 md:p-12">
-          <ContactForm
-            labels={{
-              name: t("form.name"),
-              company: t("form.company"),
-              country: t("form.country"),
-              email: t("form.email"),
-              message: t("form.message"),
-              submit: t("form.submit"),
-              sent: t("form.sent"),
-            }}
-            locale={locale}
+        <div className="relative min-h-[320px] overflow-hidden bg-ivory lg:min-h-[440px]">
+          <Image
+            src={siteConfig.showroomImageUrl}
+            alt="HUANG'S Lua Cintilante store view"
+            fill
+            quality={75}
+            sizes="(max-width: 1024px) 100vw, 54vw"
+            className="object-cover"
           />
         </div>
       </div>

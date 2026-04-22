@@ -797,16 +797,15 @@ Minimum `44×44px` on mobile viewports. Icon buttons (`40×40px` visual) receive
 2. Hero image — full-width 21:9 editorial photograph
 3. Narrative columns — long-form copy in Inter 17px, `max-width: 720px`
 4. Values Grid — 3-column "一全 / 二多 / 三快" expanded description on ivory ground
-5. Timeline / milestones — vertical dated list
+5. Focus list — numbered operating principles without unverified historical dates
 6. **Brand end-mark** — small H-monogram (logo-mark.svg, ~56px) centred on canvas as an editorial closing punctuation; reinforces brand identity at the narrative's close without competing with the headline at the top
 7. Contact CTA — burgundy ground with wholesale enquiry email + store link
 
 ### Contact Page
 
 1. Page Header — H1 + supporting copy
-2. Two-column: contact details (address, email, phone, business hours) left + enquiry form right
-3. Form fields: Name, Company, Country, Message; `submit` posts to email relay (Resend)
-4. Map embed (optional) — greyscale style
+2. Two-column: contact details (address, email, phone, WhatsApp, business hours) left + local showroom/store image right
+3. Map embed (optional) — greyscale style
 
 ---
 

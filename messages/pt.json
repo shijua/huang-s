@@ -58,22 +58,27 @@
     "title": "Sobre nós",
     "subtitle": "Moda que viaja com intenção.",
     "body": "Acreditamos que a moda por grosso pode ser feita com a mesma exigência de uma casa de autor: materiais honestos, confeção cuidada, prazos curtos. HUANG'S nasce dessa convicção.",
-    "timeline": {
-      "title": "Marcos"
+    "focus": {
+      "title": "O que mantemos próximo",
+      "items": [
+        {
+          "title": "Seleção por grosso curada",
+          "body": "Focamo-nos em linhas práticas de moda feminina que os retalhistas podem comprar, repor e combinar ao longo da estação."
+        },
+        {
+          "title": "Clareza de stock",
+          "body": "As coleções são apresentadas com acesso direto à Microstore, aproximando disponibilidade e decisão de compra."
+        },
+        {
+          "title": "Comunicação direta",
+          "body": "Dúvidas de atacado, abertura de conta e detalhes de levantamento são tratados diretamente com a equipa."
+        }
+      ]
     }
   },
   "contact": {
     "title": "Contacto",
     "subtitle": "Pedidos de atacado, parcerias ou visitas ao showroom.",
-    "form": {
-      "name": "Nome",
-      "company": "Empresa",
-      "country": "País",
-      "email": "Email",
-      "message": "Mensagem",
-      "submit": "Enviar",
-      "sent": "Mensagem enviada. Responderemos em 24 h úteis."
-    },
     "details": {
       "address": "Morada",
       "email": "Email",

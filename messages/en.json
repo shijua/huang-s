@@ -58,22 +58,27 @@
     "title": "About us",
     "subtitle": "Fashion that travels with intent.",
     "body": "We believe wholesale fashion can be handled with the same discipline as an atelier: honest materials, careful construction, and short lead times. HUANG'S was born from that conviction.",
-    "timeline": {
-      "title": "Milestones"
+    "focus": {
+      "title": "What we keep close",
+      "items": [
+        {
+          "title": "Curated wholesale selection",
+          "body": "We focus on practical women's fashion ranges that retailers can buy, restock, and combine across seasons."
+        },
+        {
+          "title": "Stock clarity",
+          "body": "Collections are presented with direct access to the Microstore, keeping product availability and buying decisions close together."
+        },
+        {
+          "title": "Direct communication",
+          "body": "Wholesale questions, account setup, and pickup details are handled through direct contact with the team."
+        }
+      ]
     }
   },
   "contact": {
     "title": "Contact",
     "subtitle": "Wholesale enquiries, partnerships, or showroom visits.",
-    "form": {
-      "name": "Name",
-      "company": "Company",
-      "country": "Country",
-      "email": "Email",
-      "message": "Message",
-      "submit": "Send",
-      "sent": "Message sent. We'll reply within one business day."
-    },
     "details": {
       "address": "Address",
       "email": "Email",

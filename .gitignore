@@ -30,5 +30,8 @@ next-env.d.ts
 /content/products/
 /public/products/
 
+# Local source image kept only for conversion; site uses /public/brand/storefront.jpg
+/public/brand/storefront.png
+
 # Misc
 Thumbs.db

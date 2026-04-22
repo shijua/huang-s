@@ -54,7 +54,7 @@ export default async function HomePage({
             </div>
           </div>
 
-          <div className="relative aspect-[16/10] w-full overflow-hidden md:aspect-[4/3]">
+          <div className="relative aspect-[16/10] w-full max-w-[620px] overflow-hidden justify-self-end md:aspect-[16/11]">
             <Image
               src={siteConfig.storefrontImageUrl}
               alt="HUANG'S Lua Cintilante storefront in Portugal"
@@ -113,7 +113,7 @@ export default async function HomePage({
       <section className="bg-brand-beige">
         <div className="container-content py-24">
           <div className="grid gap-16 md:grid-cols-2 md:gap-20 items-center">
-            <div className="relative aspect-[16/10] w-full overflow-hidden">
+            <div className="relative aspect-[16/10] w-full max-w-[620px] overflow-hidden">
               <Image
                 src={siteConfig.storefrontImageUrl}
                 alt="HUANG'S Lua Cintilante exterior"
