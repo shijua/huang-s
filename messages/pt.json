@@ -104,5 +104,11 @@
     "contact": "Contacto",
     "follow": "Redes",
     "rights": "Todos os direitos reservados."
+  },
+  "notFound": {
+    "label": "404",
+    "title": "Página não encontrada",
+    "body": "A página que procura não existe ou foi movida.",
+    "cta": "Voltar ao início"
   }
 }

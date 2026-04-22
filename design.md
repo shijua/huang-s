@@ -801,11 +801,13 @@ Minimum `44×44px` on mobile viewports. Icon buttons (`40×40px` visual) receive
 
 ### About / Brand Story Page
 
-1. Hero — full-width image + Cormorant Garamond H1
-2. Narrative columns — two-column long-form copy in Inter 16px, `max-width: 720px`
-3. Values Grid — 3-column "一全 / 二多 / 三快" expanded description
-4. Timeline / milestones — vertical dated list
-5. Contact CTA — burgundy ground with wholesale enquiry email + store link
+1. Hero text — legal-entity overline + Cormorant Garamond H1 subtitle
+2. Hero image — full-width 21:9 editorial photograph
+3. Narrative columns — long-form copy in Inter 17px, `max-width: 720px`
+4. Values Grid — 3-column "一全 / 二多 / 三快" expanded description on ivory ground
+5. Timeline / milestones — vertical dated list
+6. **Brand end-mark** — small H-monogram (logo-mark.svg, ~56px) centred on canvas as an editorial closing punctuation; reinforces brand identity at the narrative's close without competing with the headline at the top
+7. Contact CTA — burgundy ground with wholesale enquiry email + store link
 
 ### Contact Page
 

@@ -91,6 +91,15 @@ export default async function AboutPage({
         </ol>
       </section>
 
+      <section className="container-content pb-24 flex justify-center">
+        <img
+          src="/brand/logo-mark.svg"
+          alt=""
+          aria-hidden
+          className="h-14 w-auto opacity-80"
+        />
+      </section>
+
       <section className="bg-brand-burgundy text-ivory">
         <div className="container-content py-24 text-center">
           <h2 className="text-h2 text-ivory max-w-xl mx-auto">

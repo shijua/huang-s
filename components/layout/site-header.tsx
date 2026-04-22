@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/lib/i18n/routing";
 import { Wordmark } from "@/components/brand/wordmark";
+import { LogoMark } from "@/components/brand/logo-mark";
 import { LocaleSwitcher } from "./locale-switcher";
 import { siteConfig } from "@/lib/site";
 import { ArrowUpRight } from "lucide-react";
@@ -11,7 +12,8 @@ export async function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-canvas/90 backdrop-blur-sm border-b border-line">
       <div className="container-content flex h-[72px] items-center justify-between">
-        <Link href="/" className="inline-flex items-center" aria-label="HUANG'S home">
+        <Link href="/" className="inline-flex items-center gap-3" aria-label="HUANG'S home">
+          <LogoMark size={26} />
           <Wordmark />
         </Link>
 
