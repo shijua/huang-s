@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     template: `%s · ${siteConfig.name}`,
   },
   description: siteConfig.tagline.en,
+  formatDetection: { telephone: false },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.tagline.en,

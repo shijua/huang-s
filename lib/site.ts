@@ -19,6 +19,7 @@ export const siteConfig = {
     country: "Portugal",
   },
   phone: "+351 961 203 322",
+  phoneTel: "+351961203322",
   whatsapp: "https://wa.me/351961203322",
   hours: {
     pt: "Todos os dias · 9:30 – 19:00",

@@ -59,7 +59,12 @@ export default async function ContactPage({
             icon={<Phone className="h-5 w-5" strokeWidth={1.5} />}
             label={t("details.phone")}
           >
-            {siteConfig.phone}
+            <a
+              href={`tel:${siteConfig.phoneTel}`}
+              className="text-brand-burgundy hover:underline underline-offset-4"
+            >
+              {siteConfig.phone}
+            </a>
           </ContactRow>
 
           <ContactRow
