@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Link } from "@/lib/i18n/routing";
 import { Badge } from "@/components/ui/badge";
+import { ProductName } from "@/components/products/product-name";
 import { formatSku } from "@/lib/utils";
 import type { Product } from "@/lib/products";
 import type { Locale } from "@/lib/i18n/config";
@@ -33,7 +34,7 @@ export function ProductCard({ product, locale, priority }: ProductCardProps) {
       <div className="pt-4">
         <div className="flex items-baseline justify-between gap-3">
           <h3 className="font-serif text-[18px] leading-tight text-ink group-hover:text-brand-burgundy transition-colors">
-            {product.name[locale]}
+            <ProductName name={product.name[locale]} />
           </h3>
           <span className="font-mono-sku text-ink-soft">
             {formatSku(product.sku)}

@@ -9,8 +9,9 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import { ProductGallery } from "@/components/catalog/product-gallery";
-import { ProductGrid } from "@/components/catalog/product-grid";
+import { ProductGallery } from "@/components/products/product-gallery";
+import { ProductGrid } from "@/components/products/product-grid";
+import { ProductName } from "@/components/products/product-name";
 import {
   buildStoreUrl,
   getAllProducts,
@@ -53,10 +54,6 @@ export default async function ProductPage({
             Home
           </Link>
           <span className="mx-2">/</span>
-          <Link href="/catalog" className="hover:text-brand-burgundy">
-            Catalog
-          </Link>
-          <span className="mx-2">/</span>
           <span className="text-ink capitalize">{product.category}</span>
         </nav>
 
@@ -75,7 +72,10 @@ export default async function ProductPage({
             </div>
 
             <h1 className="text-h1 text-brand-charcoal mb-4">
-              {product.name[locale]}
+              <ProductName
+                name={product.name[locale]}
+                numberClassName="text-[0.8em]"
+              />
             </h1>
 
             <div className="flex items-center gap-2 text-[12px] text-ink-soft mb-8">

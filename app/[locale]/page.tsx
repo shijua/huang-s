@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/lib/i18n/routing";
 import { Button } from "@/components/ui/button";
-import { ProductGrid } from "@/components/catalog/product-grid";
+import { ProductGrid } from "@/components/products/product-grid";
 import { getNewArrivals } from "@/lib/products";
 import type { Locale } from "@/lib/i18n/config";
 import { siteConfig } from "@/lib/site";
@@ -36,7 +36,7 @@ export default async function HomePage({
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button asChild>
-                <Link href="/catalog">
+                <Link href="/wholesale">
                   {t("hero.ctaPrimary")}
                   <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
                 </Link>
@@ -54,10 +54,10 @@ export default async function HomePage({
             </div>
           </div>
 
-          <div className="relative aspect-[4/5] w-full overflow-hidden">
+          <div className="relative aspect-[16/10] w-full overflow-hidden md:aspect-[4/3]">
             <Image
-              src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1200&q=80"
-              alt="HUANG'S seasonal lookbook"
+              src={siteConfig.storefrontImageUrl}
+              alt="HUANG'S Lua Cintilante storefront in Portugal"
               fill
               priority
               quality={70}
@@ -87,22 +87,24 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* New arrivals */}
+      {/* Collection */}
       <section className="container-content py-24">
         <div className="flex items-end justify-between mb-12">
           <div>
             <p className="text-overline text-brand-burgundy mb-3">
-              {t("arrivals.eyebrow")}
+              {t("collection.eyebrow")}
             </p>
-            <h2 className="text-h2">{t("arrivals.title")}</h2>
+            <h2 className="text-h2">{t("collection.title")}</h2>
           </div>
-          <Link
-            href="/catalog"
+          <a
+            href={siteConfig.storeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-2 text-[13px] tracking-[0.14em] uppercase font-medium text-brand-burgundy hover:text-brand-charcoal"
           >
-            {t("arrivals.cta")}
-            <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
-          </Link>
+            {t("collection.cta")}
+            <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
+          </a>
         </div>
         <ProductGrid products={arrivals} locale={locale} />
       </section>
@@ -111,10 +113,10 @@ export default async function HomePage({
       <section className="bg-brand-beige">
         <div className="container-content py-24">
           <div className="grid gap-16 md:grid-cols-2 md:gap-20 items-center">
-            <div className="relative aspect-[4/5] w-full overflow-hidden">
+            <div className="relative aspect-[16/10] w-full overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200&q=80"
-                alt="Atelier detail"
+                src={siteConfig.storefrontImageUrl}
+                alt="HUANG'S Lua Cintilante exterior"
                 fill
                 quality={70}
                 sizes="(max-width: 768px) 100vw, 50vw"

@@ -1,7 +1,7 @@
 {
   "nav": {
-    "catalog": "Catálogo",
     "about": "Sobre",
+    "wholesale": "Atacado",
     "contact": "Contacto",
     "shop": "Loja Online",
     "language": "Idioma"
@@ -11,7 +11,7 @@
       "eyebrow": "Moda feminina · Grossista em Portugal",
       "title": "Elegância por atacado, sem complicações.",
       "subtitle": "Selecionamos coleções em tendência para retalhistas exigentes. Uma só fonte, muita escolha, entrega rápida.",
-      "ctaPrimary": "Ver catálogo",
+      "ctaPrimary": "Como comprar por atacado",
       "ctaSecondary": "Loja online"
     },
     "values": {
@@ -22,10 +22,10 @@
         { "title": "Entrega rápida", "body": "Stock na Península — envios em 24–72 h." }
       ]
     },
-    "arrivals": {
-      "eyebrow": "Novidades",
-      "title": "Chegadas desta semana",
-      "cta": "Ver todo o catálogo"
+    "collection": {
+      "eyebrow": "Coleção",
+      "title": "O edit actual.",
+      "cta": "Ver na loja online"
     },
     "story": {
       "eyebrow": "A nossa história",
@@ -37,23 +37,6 @@
       "title": "Pronto para encomendar?",
       "body": "Aceda à nossa loja online para ver stock em tempo real, preços e condições de atacado.",
       "cta": "Ir para a loja"
-    }
-  },
-  "catalog": {
-    "title": "Catálogo",
-    "resultCount": "{count, plural, one {# referência} other {# referências}}",
-    "filters": {
-      "title": "Filtros",
-      "category": "Categoria",
-      "size": "Tamanho",
-      "color": "Cor",
-      "clearAll": "Limpar tudo"
-    },
-    "empty": "Sem resultados para os filtros selecionados.",
-    "sort": {
-      "label": "Ordenar",
-      "newest": "Mais recentes",
-      "featured": "Em destaque"
     }
   },
   "product": {
@@ -110,5 +93,69 @@
     "title": "Página não encontrada",
     "body": "A página que procura não existe ou foi movida.",
     "cta": "Voltar ao início"
+  },
+  "wholesale": {
+    "title": "Como trabalhamos",
+    "subtitle": "Um processo claro em cinco passos, moldado por duas décadas ao serviço das boutiques europeias.",
+    "process": {
+      "eyebrow": "Processo",
+      "actions": {
+        "whatsapp": "Falar no WhatsApp",
+        "microstore": "Abrir Microstore"
+      },
+      "steps": [
+        { "title": "Pedido", "body": "Envie-nos uma mensagem curta com a sua loja, as categorias que trabalha e os mercados onde vende. Respondemos em 24 h úteis." },
+        { "title": "Abertura de conta", "body": "Abrimos uma conta de atacado, verificamos o registo comercial e damos acesso à Microstore em tempo real." },
+        { "title": "Acesso à Microstore", "body": "Consulte stock em tempo real, preços de atacado e novidades semanais na loja online — sem compromisso para explorar." },
+        { "title": "Encomenda", "body": "Encomende online ou com o seu gestor. Tamanhos e cores à mistura dentro de cada referência." },
+        { "title": "Expedição", "body": "Expedimos em 24–72 h do armazém do Porto. Entregas rastreadas por toda a UE." }
+      ]
+    },
+    "rules": {
+      "eyebrow": "Normas de funcionamento",
+      "title": "Como funcionam as encomendas.",
+      "groups": [
+        {
+          "title": "Em loja",
+          "items": [
+            "Ter ficha de cliente",
+            "Facultar nome ou número associado à ficha de cliente",
+            "Ter conta na app HUANG'S (opcional)"
+          ]
+        },
+        {
+          "title": "Online",
+          "items": [
+            "Mínimo 10 peças (2 por modelo)",
+            "7 dias para fazer o levantamento",
+            "Consultar preços na aplicação",
+            "Reservar e não levantar perde o direito a reservas online"
+          ]
+        },
+        {
+          "title": "Primeira compra",
+          "items": [
+            "Mínimo 150€ + IVA",
+            "Apresentar início de actividade",
+            "Criar conta na app HUANG'S (opcional)"
+          ]
+        },
+        {
+          "title": "Envios",
+          "items": [
+            "Mínimo 200€ + IVA",
+            "Pagamento por transferência",
+            "Entregas em 24–48 h úteis",
+            "10€ por caixa, até 30 kg"
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Pronto para abrir conta?",
+      "body": "Conte-nos um pouco sobre a sua loja e enviamos tudo o que precisa para começar a encomendar.",
+      "cta": "Abrir conta",
+      "microstoreLabel": "Microstore"
+    }
   }
 }

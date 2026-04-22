@@ -76,6 +76,7 @@
     font-size: 15px;
     line-height: 1.6;
     font-feature-settings: "ss01", "cv11";
+    font-variant-numeric: lining-nums;
   }
 
   h1, h2, h3 {
@@ -83,6 +84,7 @@
     font-weight: 400;
     letter-spacing: -0.01em;
     color: var(--color-ink);
+    font-variant-numeric: lining-nums;
   }
 
   h4, h5, h6 {
@@ -159,6 +161,7 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
     font-weight: 500;
+    font-variant-numeric: tabular-nums lining-nums;
   }
 
   .text-caption {
@@ -166,12 +169,24 @@
     font-size: 12px;
     letter-spacing: 0.02em;
     color: var(--color-ink-soft);
+    font-variant-numeric: tabular-nums lining-nums;
   }
 
   .font-mono-sku {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 12px;
-    letter-spacing: 0.04em;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  .product-name-number {
+    font-family: var(--font-sans);
+    font-size: 0.82em;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums lining-nums;
+    vertical-align: 0.04em;
   }
 
   .hairline {

@@ -7,6 +7,7 @@ import type { Locale } from "@/lib/i18n/config";
 export async function SiteFooter() {
   const t = await getTranslations("footer");
   const tNav = await getTranslations("nav");
+  const tDetails = await getTranslations("contact.details");
   const locale = (await getLocale()) as Locale;
   const year = new Date().getFullYear();
 
@@ -25,21 +26,32 @@ export async function SiteFooter() {
           </div>
 
           <FooterColumn title={t("explore")}>
-            <Link href="/catalog">{tNav("catalog")}</Link>
             <Link href="/about">{tNav("about")}</Link>
+            <Link href="/wholesale">{tNav("wholesale")}</Link>
             <a href={siteConfig.storeUrl} target="_blank" rel="noopener noreferrer">
               {tNav("shop")}
             </a>
           </FooterColumn>
 
-          <FooterColumn title={t("contact")}>
-            <a href={`mailto:${siteConfig.contactEmail}`}>
-              {siteConfig.contactEmail}
-            </a>
-            <a href={siteConfig.whatsapp} target="_blank" rel="noopener noreferrer">
-              WhatsApp · {siteConfig.phone}
-            </a>
-            <span>{siteConfig.hours[locale]}</span>
+          <FooterColumn title={t("contact")} spacing="space-y-4">
+            <ContactField label="WhatsApp">
+              <a
+                href={siteConfig.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whitespace-nowrap"
+              >
+                {siteConfig.phone}
+              </a>
+            </ContactField>
+            <ContactField label={tDetails("email")}>
+              <a href={`mailto:${siteConfig.contactEmail}`}>
+                {siteConfig.contactEmail}
+              </a>
+            </ContactField>
+            <ContactField label={tDetails("hours")}>
+              {siteConfig.hours[locale]}
+            </ContactField>
           </FooterColumn>
 
           <FooterColumn title={t("follow")}>
@@ -69,20 +81,41 @@ export async function SiteFooter() {
 function FooterColumn({
   title,
   children,
+  spacing = "space-y-2",
 }: {
   title: string;
   children: React.ReactNode;
+  spacing?: string;
 }) {
   return (
     <div>
       <h4 className="text-[11px] tracking-[0.14em] uppercase text-ivory/60 font-medium mb-4">
         {title}
       </h4>
-      <ul className="space-y-2 text-[14px] text-ivory/90 [&>*>a]:hover:text-brand-beige [&>*>a]:transition-colors">
+      <ul
+        className={`${spacing} text-[14px] text-ivory/90 [&>*>a]:hover:text-brand-beige [&>*>a]:transition-colors`}
+      >
         {Array.isArray(children)
           ? children.map((child, i) => <li key={i}>{child}</li>)
           : <li>{children}</li>}
       </ul>
+    </div>
+  );
+}
+
+function ContactField({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div>
+      <span className="block text-[11px] tracking-[0.14em] uppercase text-ivory/50 mb-0.5">
+        {label}
+      </span>
+      <span className="block">{children}</span>
     </div>
   );
 }

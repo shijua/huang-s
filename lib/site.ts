@@ -10,7 +10,9 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://huangs.pt",
   storeUrl: process.env.NEXT_PUBLIC_STORE_URL ?? "https://lua.microstore.app/#/shopMain",
   storeInfoUrl: "https://lua.microstore.app/#/shop/info",
+  microstoreId: "618100",
   brandLogoUrl: "/brand/logo.jpg",
+  storefrontImageUrl: "/brand/storefront.jpg",
   contactEmail:
     process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "huangssuporte@outlook.com",
   address: {

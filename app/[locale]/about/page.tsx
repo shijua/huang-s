@@ -10,7 +10,7 @@ const milestones = [
   { year: "2021", body: { pt: "Fundação da Lua Cintilante Unipessoal Lda.", en: "Lua Cintilante Unipessoal Lda founded.", zh: "Lua Cintilante Unipessoal Lda 注册成立。" } },
   { year: "2022", body: { pt: "Primeira coleção distribuída em Portugal.", en: "First collection distributed across Portugal.", zh: "首个系列在葡萄牙上市。" } },
   { year: "2024", body: { pt: "Expansão para Espanha e Itália.", en: "Expanded into Spain and Italy.", zh: "业务拓展至西班牙与意大利。" } },
-  { year: "2026", body: { pt: "Lançamento do novo catálogo digital.", en: "Launch of the new digital catalog.", zh: "全新数字化目录上线。" } },
+  { year: "2026", body: { pt: "Lançamento da nova presença digital.", en: "Launch of the new digital presence.", zh: "全新数字化展示上线。" } },
 ];
 
 export default async function AboutPage({
@@ -34,8 +34,8 @@ export default async function AboutPage({
 
       <section className="relative aspect-[21/9] w-full overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600&q=80"
-          alt="HUANG'S atelier"
+          src={siteConfig.storefrontImageUrl}
+          alt="HUANG'S Lua Cintilante storefront in Portugal"
           fill
           priority
           quality={70}

@@ -3,6 +3,7 @@ import { Link } from "@/lib/i18n/routing";
 import { Wordmark } from "@/components/brand/wordmark";
 import { LogoMark } from "@/components/brand/logo-mark";
 import { LocaleSwitcher } from "./locale-switcher";
+import { MobileMenu } from "./mobile-menu";
 import { siteConfig } from "@/lib/site";
 import { ArrowUpRight } from "lucide-react";
 
@@ -19,16 +20,16 @@ export async function SiteHeader() {
 
         <nav className="hidden md:flex items-center gap-10 text-[13px] tracking-[0.14em] uppercase font-medium">
           <Link
-            href="/catalog"
-            className="text-ink hover:text-brand-burgundy transition-colors"
-          >
-            {t("catalog")}
-          </Link>
-          <Link
             href="/about"
             className="text-ink hover:text-brand-burgundy transition-colors"
           >
             {t("about")}
+          </Link>
+          <Link
+            href="/wholesale"
+            className="text-ink hover:text-brand-burgundy transition-colors"
+          >
+            {t("wholesale")}
           </Link>
           <Link
             href="/contact"
@@ -39,16 +40,24 @@ export async function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-6">
-          <LocaleSwitcher className="hidden sm:inline-flex" />
+          <LocaleSwitcher className="hidden min-[720px]:inline-flex" />
           <a
             href={siteConfig.storeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-[13px] tracking-[0.14em] uppercase font-medium text-brand-burgundy hover:text-brand-charcoal transition-colors"
+            className="hidden min-[420px]:inline-flex items-center gap-1 text-[13px] tracking-[0.14em] uppercase font-medium text-brand-burgundy hover:text-brand-charcoal transition-colors"
           >
             {t("shop")}
             <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
           </a>
+          <MobileMenu
+            labels={{
+              about: t("about"),
+              wholesale: t("wholesale"),
+              contact: t("contact"),
+              shop: t("shop"),
+            }}
+          />
         </div>
       </div>
     </header>

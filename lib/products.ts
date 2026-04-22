@@ -110,34 +110,6 @@ export function getRelatedProducts(slug: string, limit = 4): Product[] {
     .slice(0, limit);
 }
 
-export interface CatalogFilters {
-  category?: string;
-  size?: string;
-  color?: string;
-}
-
-export function filterProducts(filters: CatalogFilters): Product[] {
-  return getAllProducts().filter((p) => {
-    if (filters.category && p.category !== filters.category) return false;
-    if (filters.size && !p.sizes.includes(filters.size)) return false;
-    if (filters.color && !p.colors.includes(filters.color)) return false;
-    return true;
-  });
-}
-
-export function getCategories(): ProductCategory[] {
-  const available = new Set(products.map((p) => p.category));
-  return PRODUCT_CATEGORIES.filter((category) => available.has(category));
-}
-
-export function getAllSizes(): string[] {
-  return Array.from(new Set(products.flatMap((p) => p.sizes)));
-}
-
-export function getAllColors(): string[] {
-  return Array.from(new Set(products.flatMap((p) => p.colors)));
-}
-
 export function buildStoreUrl(product: Product, storeBaseUrl: string): string {
   if (!product.storePath) return storeBaseUrl;
   return `${storeBaseUrl.replace(/\/$/, "")}${product.storePath}`;

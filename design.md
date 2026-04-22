@@ -2,7 +2,7 @@
 
 ## 1. Visual Theme & Atmosphere
 
-HUANG'S design system is built on the tension between restraint and authority — a B2B luxury fashion portal that communicates efficiency and prestige in equal measure. The visual language draws from the tradition of Parisian wholesale houses and high-end editorial fashion: cream-toned surfaces that feel tactile and considered, deep burgundy-red that signals confidence and heritage, and typographic compositions that command attention without shouting. Every element is stripped of decoration unless it earns its place. The result is a portal that a Portuguese retailer opens and immediately trusts — not because it dazzles, but because it projects absolute seriousness about the business of fashion. Whitespace is used aggressively as a status signal; density is reserved for the catalog where information throughput matters. The system pivots cleanly between seasonal palettes — shifting from the warm Red/Beige all-season identity into cooler Grey/Beige or stark Black/Beige modes for Fall/Winter campaigns — while keeping the structural bones identical.
+HUANG'S design system is built on the tension between restraint and authority — a B2B luxury fashion portal that communicates efficiency and prestige in equal measure. The visual language draws from the tradition of Parisian wholesale houses and high-end editorial fashion: cream-toned surfaces that feel tactile and considered, deep burgundy-red that signals confidence and heritage, and typographic compositions that command attention without shouting. Every element is stripped of decoration unless it earns its place. The result is a portal that a Portuguese retailer opens and immediately trusts — not because it dazzles, but because it projects absolute seriousness about the business of fashion. Whitespace is used aggressively as a status signal; density is reserved for product grids where information throughput matters. The system pivots cleanly between seasonal palettes — shifting from the warm Red/Beige all-season identity into cooler Grey/Beige or stark Black/Beige modes for Fall/Winter campaigns — while keeping the structural bones identical.
 
 **Key Characteristics:**
 - **Understated luxury:** No gradients, no drop shadows on type, no decorative flourishes — luxury is expressed through proportion and material-like surfaces
@@ -68,9 +68,9 @@ HUANG'S design system is built on the tension between restraint and authority �
 `'Cormorant Garamond', 'Garamond', 'Georgia', serif`
 A refined, high-contrast serif with fashion-editorial DNA. Cormorant Garamond carries the weight of luxury fashion typography while remaining legible at display scale. Used for all headings, hero text, and brand statements.
 
-**Secondary (Sans-serif — Body, UI, and Catalog):**
+**Secondary (Sans-serif — Body, UI, and Product Data):**
 `'Inter', 'Helvetica Neue', 'Arial', sans-serif`
-The workhorse of the system. Inter's tabular numerals, open apertures, and surgical legibility make it ideal for product listings, pricing tables, form labels, and bulk catalog browsing. Chosen for its neutrality — it never competes with the serif voice.
+The workhorse of the system. Inter's tabular numerals, open apertures, and surgical legibility make it ideal for product listings, pricing tables, form labels, and dense product browsing. Chosen for its neutrality — it never competes with the serif voice.
 
 **Tertiary (Monospace — Reference Numbers, SKUs, Order IDs):**
 `'JetBrains Mono', 'Courier New', monospace`
@@ -81,7 +81,7 @@ Used exclusively for order reference numbers, SKU identifiers, and pricing data 
 | Role | Font | Size | Weight | Line Height | Letter Spacing | Notes |
 |---|---|---|---|---|---|---|
 | **Display / Hero** | Cormorant Garamond | 72px | 300 (Light) | 78px | `0.02em` | All-caps optional; brand statements only |
-| **H1 — Page Title** | Cormorant Garamond | 52px | 400 (Regular) | 60px | `0.01em` | One per page; catalog titles, section heroes |
+| **H1 — Page Title** | Cormorant Garamond | 52px | 400 (Regular) | 60px | `0.01em` | One per page; product titles, section heroes |
 | **H2 — Section Heading** | Cormorant Garamond | 38px | 400 (Regular) | 48px | `0.01em` | "Our Strengths", "New Arrivals", etc. |
 | **H3 — Sub-Section** | Cormorant Garamond | 28px | 500 (Medium) | 36px | `0.015em` | Card titles, feature names, sub-categories |
 | **H4 — Label Heading** | Inter | 13px | 600 (SemiBold) | 20px | `0.12em` | ALL CAPS; nav labels, section eyebrows, tags |
@@ -114,7 +114,7 @@ Used exclusively for order reference numbers, SKU identifiers, and pricing data 
 
 ### Buttons
 
-**Primary Button** (Main CTA — "Place Order", "View Catalog", "Login")
+**Primary Button** (Main CTA — "Shop on Our Store", "Contact", "Register")
 - `background: #3A1810`
 - `color: #F5F2EC`
 - `padding: 14px 32px`
@@ -131,7 +131,7 @@ Used exclusively for order reference numbers, SKU identifiers, and pricing data 
 - **Disabled:** `background: #C8C4BB; border-color: #C8C4BB; color: #9A9690; cursor: not-allowed`
 - **Focus:** `outline: 2px solid #3A1810; outline-offset: 2px`
 
-**Secondary Button** (Supporting action — "Download Catalog", "Save Draft")
+**Secondary Button** (Supporting action — "Open Microstore", "Contact Sales")
 - `background: transparent`
 - `color: #3A1810`
 - `padding: 13px 32px`
@@ -179,7 +179,7 @@ Used exclusively for order reference numbers, SKU identifiers, and pricing data 
 
 ### Cards & Containers
 
-**Product Card** (Primary unit of the catalog)
+**Product Card** (Primary unit of product presentation)
 - `background: #F5F2EC`
 - `border: 1px solid #C8C4BB`
 - `border-radius: 2px`
@@ -259,7 +259,7 @@ Used exclusively for order reference numbers, SKU identifiers, and pricing data 
 - Custom chevron: `right: 16px; color: #4A494A`
 - **Focus:** same as text input focus
 
-**Search Input** (Catalog search bar)
+**Search Input** (Product search bar)
 - `background: #F5F2EC`
 - `border: 1px solid #C8C4BB`
 - `border-radius: 2px`
@@ -282,7 +282,7 @@ Used exclusively for order reference numbers, SKU identifiers, and pricing data 
 - **Checked state:** `background: #3A1810; border-color: #3A1810`; checkmark in `#F5F2EC`
 - `label font-family: Inter; font-size: 14px; color: #4A494A`
 
-**Filter Chip** (Catalog filters — size, category, color)
+**Filter Chip** (Product filters — size, category, color)
 - `background: transparent; border: 1px solid #C8C4BB; border-radius: 2px`
 - `padding: 6px 14px`
 - `font-family: Inter; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #4A494A`
@@ -323,7 +323,7 @@ Used exclusively for order reference numbers, SKU identifiers, and pricing data 
 - Styled as Primary Button but compact: `padding: 10px 24px`
 - `background: #3A1810; color: #F5F2EC`
 
-**Breadcrumb** (Catalog & portal pages)
+**Breadcrumb** (Product & portal pages)
 - `font-family: Inter; font-size: 12px; color: #9A9690`
 - Separator: `·` or `/` in `#C8C4BB`
 - Active/current crumb: `color: #151212; font-weight: 500`
@@ -364,7 +364,7 @@ Used exclusively for order reference numbers, SKU identifiers, and pricing data 
 
 ---
 
-### Tables (Order Management / Catalog Grid View)
+### Tables (Order Management / Product Grid View)
 
 **Table Container**
 - `background: #FAFAF8`
@@ -418,7 +418,7 @@ Base unit: `8px`
 **Gutter:** `32px` (desktop), `24px` (tablet), `16px` (mobile)  
 **Column margin:** `48px` (desktop), `32px` (tablet), `16px` (mobile)
 
-**Catalog Grid:**
+**Product Grid:**
 - Desktop (1280px+): 4-column product grid, `gap: 32px`
 - Tablet (768px–1279px): 3-column product grid, `gap: 24px`
 - Mobile (below 768px): 2-column product grid, `gap: 16px`
@@ -454,7 +454,7 @@ The system is intentionally flat-radius. The `2px` default is the only radius th
 
 ### Principles
 
-HUANG'S motion philosophy mirrors its visual language: restrained, purposeful, never decorative. Animation is a tool for orientation and feedback, not spectacle. A B2B buyer navigating a catalog of 400 SKUs does not want choreography — they want immediate response and confident transitions.
+HUANG'S motion philosophy mirrors its visual language: restrained, purposeful, never decorative. Animation is a tool for orientation and feedback, not spectacle. A B2B buyer navigating product ranges and wholesale information does not want choreography — they want immediate response and confident transitions.
 
 - **Transitions, not animations:** Elements transition between states; they do not perform entrances. Reserve keyframe-based motion for loading states and skeleton screens only.
 - **200ms is the default:** Most interactive state changes (hover, focus, active) complete in `200ms ease`.
@@ -679,7 +679,7 @@ The structural system (typography, spacing, components, grid) is constant across
 
 ### All-Season — 红 + 米 (Default)
 
-The primary identity. Applied to all year-round marketing, the catalog default state, and physical touchpoints unless a seasonal override is declared.
+The primary identity. Applied to all year-round marketing, the default product presentation, and physical touchpoints unless a seasonal override is declared.
 
 | Role | Color | Hex |
 |---|---|---|
@@ -777,19 +777,11 @@ Minimum `44×44px` on mobile viewports. Icon buttons (`40×40px` visual) receive
 1. Sticky Navigation — `72px`, `z-index: 100`
 2. Hero — Full-width, `min-height: 560px`; H1 Cormorant Garamond 52px left-aligned; primary CTA; optional image right-column
 3. Brand Proposition Strip — 3-column Feature Cards ("一全 / 二多 / 三快"); `padding: 96px 0`
-4. New Arrivals Grid — H2 + 4-column product grid + CTA to full catalog
+4. New Arrivals Grid — H2 + 4-column product grid + CTA to Microstore
 5. Social Proof Strip — retailer logos or pull-quote in Cormorant Garamond italic
 6. Brand Story Module — full-bleed image left, text right; `padding: 96px 0`
 7. External-Store CTA — Brand Burgundy ground; ivory headline + "Shop on Our Store" secondary button (external link, `target="_blank"`)
 8. Footer — `#151212` ground, 4-column link grid + address
-
-### Catalog Page (Public, Display-Only)
-
-1. Condensed Navigation — same sticky header as homepage
-2. Page Header — Breadcrumb + H1 + result count; active filter chips below
-3. Filter Sidebar — `280px` fixed; category / size / color; clear-all ghost button
-4. Catalog Grid — 4-col desktop / 3-col tablet / 2-col mobile; product cards display imagery + name + category; entire card links to product detail
-5. Pagination — centered text navigation; Inter 13px
 
 ### Product Detail Page (Public, Display-Only)
 
@@ -820,13 +812,13 @@ Minimum `44×44px` on mobile viewports. Icon buttons (`40×40px` visual) receive
 
 ## 12. Tech Stack
 
-Implementation is optimised for a **display-first marketing + catalog site**. All purchase actions deep-link to the existing storefront — this site carries no cart, auth, or transactional database.
+Implementation is optimised for a **display-first marketing and product showcase site**. All purchase actions deep-link to the existing storefront — this site carries no cart, auth, or transactional database.
 
 ### 12.1 Core Framework
 
 | Layer | Choice | Why |
 |---|---|---|
-| Framework | **Next.js 15 (App Router)** | Static export / ISR for catalog pages; fast SEO; `next/image` for editorial imagery; React Server Components keep bundle small |
+| Framework | **Next.js 15 (App Router)** | Static export / ISR for marketing and product pages; fast SEO; `next/image` for editorial imagery; React Server Components keep bundle small |
 | Language | **TypeScript (strict)** | Type-safe product schema |
 | Styling | **Tailwind CSS v4** | Token-based; maps 1:1 to color / spacing (8px) / radius (2px) / type scales from Sections 2–5 |
 | UI Primitives | **shadcn/ui (Radix UI)** | Accessible primitives (focus rings, keyboard nav, ARIA) per Section 10 |
@@ -872,7 +864,7 @@ Implementation is optimised for a **display-first marketing + catalog site**. Al
 | Package manager | **pnpm** |
 | Lint / format | **ESLint + Prettier + `prettier-plugin-tailwindcss`** |
 | Git hooks | **Husky + lint-staged** |
-| Testing | **Playwright** (smoke: home → catalog → product → outbound click) |
+| Testing | **Playwright** (smoke: home → product → outbound click) |
 | CI | **GitHub Actions** — lint, typecheck, preview deploy |
 
 ### 12.7 Directory Structure
@@ -882,7 +874,6 @@ huangs/
 ├── app/
 │   └── [locale]/
 │       ├── page.tsx              # homepage
-│       ├── catalog/              # /catalog, /catalog/[category]
 │       ├── products/[slug]/      # product detail
 │       ├── about/
 │       ├── contact/
@@ -891,7 +882,7 @@ huangs/
 │   ├── ui/                       # shadcn primitives
 │   ├── brand/                    # Logo, Wordmark
 │   ├── layout/                   # SiteHeader, SiteFooter
-│   └── catalog/                  # ProductCard, FilterSidebar, ProductGallery
+│   └── products/                 # ProductCard, ProductGallery, ProductGrid
 ├── content/
 │   └── products/                 # slug/product.json; category lives in JSON
 ├── lib/

@@ -1,7 +1,7 @@
 {
   "nav": {
-    "catalog": "Catalog",
     "about": "About",
+    "wholesale": "Wholesale",
     "contact": "Contact",
     "shop": "Online Store",
     "language": "Language"
@@ -11,7 +11,7 @@
       "eyebrow": "Women's fashion · Wholesale in Portugal",
       "title": "Wholesale elegance, made simple.",
       "subtitle": "We curate on-trend collections for discerning retailers. One source, many choices, fast delivery.",
-      "ctaPrimary": "View catalog",
+      "ctaPrimary": "How wholesale works",
       "ctaSecondary": "Online store"
     },
     "values": {
@@ -22,10 +22,10 @@
         { "title": "Fast delivery", "body": "Iberian warehousing — 24–72 h dispatch." }
       ]
     },
-    "arrivals": {
-      "eyebrow": "New Arrivals",
-      "title": "This week's drop",
-      "cta": "View full catalog"
+    "collection": {
+      "eyebrow": "Collection",
+      "title": "The current edit.",
+      "cta": "View on Microstore"
     },
     "story": {
       "eyebrow": "Our story",
@@ -37,23 +37,6 @@
       "title": "Ready to order?",
       "body": "Head to our online store for live stock, pricing, and wholesale terms.",
       "cta": "Go to store"
-    }
-  },
-  "catalog": {
-    "title": "Catalog",
-    "resultCount": "{count, plural, one {# item} other {# items}}",
-    "filters": {
-      "title": "Filters",
-      "category": "Category",
-      "size": "Size",
-      "color": "Color",
-      "clearAll": "Clear all"
-    },
-    "empty": "No results for the selected filters.",
-    "sort": {
-      "label": "Sort",
-      "newest": "Newest",
-      "featured": "Featured"
     }
   },
   "product": {
@@ -110,5 +93,69 @@
     "title": "Page not found",
     "body": "The page you are looking for does not exist or has been moved.",
     "cta": "Back to home"
+  },
+  "wholesale": {
+    "title": "How we work",
+    "subtitle": "A clear five-step process, shaped by two decades of serving European boutiques.",
+    "process": {
+      "eyebrow": "Process",
+      "actions": {
+        "whatsapp": "Message on WhatsApp",
+        "microstore": "Open Microstore"
+      },
+      "steps": [
+        { "title": "Enquiry", "body": "Send a short message with your shop, the categories you carry, and the markets you serve. We reply within one business day." },
+        { "title": "Onboarding", "body": "We open a wholesale account, verify your business registration, and share access to the live Microstore." },
+        { "title": "Microstore access", "body": "Browse live stock, wholesale pricing, and weekly drops on the online store — no commitment to explore." },
+        { "title": "Order", "body": "Place your order online or with your account manager. Mix sizes and colors freely across styles." },
+        { "title": "Fulfilment", "body": "Dispatch within 24–72 hours from our Porto warehouse. Tracked delivery across the EU." }
+      ]
+    },
+    "rules": {
+      "eyebrow": "Operating rules",
+      "title": "How orders work.",
+      "groups": [
+        {
+          "title": "In store",
+          "items": [
+            "Customer account required",
+            "Provide the name or number linked to your account",
+            "Huang's app account (optional)"
+          ]
+        },
+        {
+          "title": "Online",
+          "items": [
+            "Minimum 10 pieces (2 per style)",
+            "7 days to collect your reservation",
+            "Live prices available in the app",
+            "Missed collections forfeit online reservation rights"
+          ]
+        },
+        {
+          "title": "First purchase",
+          "items": [
+            "Minimum €150 + VAT",
+            "Proof of business registration required",
+            "Huang's app account (optional)"
+          ]
+        },
+        {
+          "title": "Shipping",
+          "items": [
+            "Minimum €200 + VAT",
+            "Payment by bank transfer",
+            "Delivery in 24–48 working hours",
+            "€10 per box, up to 30 kg"
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to open an account?",
+      "body": "Tell us a little about your shop and we'll send over everything you need to start ordering.",
+      "cta": "Open an account",
+      "microstoreLabel": "Microstore"
+    }
   }
 }
