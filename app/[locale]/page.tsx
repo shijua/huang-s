@@ -60,6 +60,7 @@ export default async function HomePage({
               alt="HUANG'S seasonal lookbook"
               fill
               priority
+              quality={70}
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
@@ -103,7 +104,7 @@ export default async function HomePage({
             <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
           </Link>
         </div>
-        <ProductGrid products={arrivals} locale={locale} priorityCount={2} />
+        <ProductGrid products={arrivals} locale={locale} />
       </section>
 
       {/* Brand story */}
@@ -115,6 +116,7 @@ export default async function HomePage({
                 src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200&q=80"
                 alt="Atelier detail"
                 fill
+                quality={70}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />

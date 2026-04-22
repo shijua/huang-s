@@ -38,6 +38,7 @@ export default async function AboutPage({
           alt="HUANG'S atelier"
           fill
           priority
+          quality={70}
           sizes="100vw"
           className="object-cover"
         />

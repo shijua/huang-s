@@ -45,10 +45,10 @@ export function LocaleSwitcher({ className }: { className?: string }) {
             onClick={() => onChange(l)}
             disabled={isPending}
             className={cn(
-              "px-[2px] py-[2px] transition-colors",
+              "px-[2px] py-[2px] transition-all cursor-pointer active:scale-95 active:opacity-70",
               l === currentLocale
                 ? "text-brand-burgundy"
-                : "text-ink-soft hover:text-ink"
+                : "text-ink-soft hover:text-brand-burgundy"
             )}
             aria-current={l === currentLocale ? "true" : undefined}
           >
