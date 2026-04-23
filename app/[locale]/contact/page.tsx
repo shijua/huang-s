@@ -1,5 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import Image from "next/image";
+import { BrandVisual } from "@/components/brand/brand-visual";
 import { siteConfig } from "@/lib/site";
 import type { Locale } from "@/lib/i18n/config";
 import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
@@ -89,16 +89,7 @@ export default async function ContactPage({
           </ContactRow>
         </div>
 
-        <div className="relative min-h-[320px] overflow-hidden bg-ivory lg:min-h-[440px]">
-          <Image
-            src={siteConfig.showroomImageUrl}
-            alt="HUANG'S Lua Cintilante store view"
-            fill
-            quality={75}
-            sizes="(max-width: 1024px) 100vw, 54vw"
-            className="object-cover"
-          />
-        </div>
+        <BrandVisual variant="contact" />
       </div>
     </div>
   );

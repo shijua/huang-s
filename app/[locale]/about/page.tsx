@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { BrandVisual } from "@/components/brand/brand-visual";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/lib/i18n/routing";
 import { siteConfig } from "@/lib/site";
@@ -26,17 +26,7 @@ export default async function AboutPage({
       </section>
 
       <section className="container-content pb-20 md:pb-24">
-        <div className="relative aspect-[16/7] max-h-[460px] w-full overflow-hidden">
-          <Image
-            src={siteConfig.storefrontImageUrl}
-            alt="HUANG'S Lua Cintilante storefront in Portugal"
-            fill
-            priority
-            quality={70}
-            sizes="(max-width: 1440px) calc(100vw - 96px), 1320px"
-            className="object-cover"
-          />
-        </div>
+        <BrandVisual variant="wide" priority />
       </section>
 
       <section className="container-content pb-24">

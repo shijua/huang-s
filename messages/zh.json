@@ -100,8 +100,8 @@
     "cta": "返回首页"
   },
   "wholesale": {
-    "title": "合作流程",
-    "subtitle": "五步流程清晰透明 — 二十年服务欧洲精品店的经验积淀。",
+    "title": "如何合作",
+    "subtitle": "清晰的五步流程，源自二十年与欧洲精品店同行的积累。",
     "process": {
       "eyebrow": "流程",
       "actions": {
@@ -117,8 +117,8 @@
       ]
     },
     "rules": {
-      "eyebrow": "运营规则",
-      "title": "下单方式一览。",
+      "eyebrow": "合作须知",
+      "title": "下单方式。",
       "groups": [
         {
           "title": "店内",

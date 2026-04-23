@@ -81,13 +81,13 @@ export function MobileMenu({ labels }: MobileMenuProps) {
             href={siteConfig.storeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-brand-burgundy hover:text-brand-charcoal transition-colors"
+            className="min-[420px]:hidden inline-flex items-center gap-1 text-brand-burgundy hover:text-brand-charcoal transition-colors"
           >
             {labels.shop}
             <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
           </a>
 
-          <div className="pt-6 border-t border-line">
+          <div className="min-[720px]:hidden pt-6 border-t border-line">
             <LocaleSwitcher />
           </div>
         </nav>

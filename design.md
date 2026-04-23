@@ -536,6 +536,23 @@ Three sanctioned logo treatments, mapped to background context:
 
 The geometric H-mark icon and the wordmark "HUANG'S" always maintain their proportional relationship. "PORTUGAL" subtitle appears as a secondary line in `Inter`, `font-size: 11px`, `letter-spacing: 0.16em`, `text-transform: uppercase`, vertically separated from the wordmark by `6px`.
 
+### Digital Brand Photography
+
+Brand photography is implemented through `components/brand/brand-visual.tsx`. Each public image is a compressed WebP derivative in `public/brand/`; raw camera files and unused candidates stay outside the public asset path.
+
+| Variant | Asset | Primary Use | Frame |
+|---|---|---|---|
+| `hero` | `visual-landscape-olive-rail.webp` | Homepage hero | Portrait editorial crop, `4:5` |
+| `story` | `visual-landscape-jeans.webp` | Homepage brand story | Portrait editorial crop, `4:5` |
+| `wide` | `visual-landscape-storefront.webp` | About page company exterior | Wide company crop, approx. `42:23` |
+| `contact` | `visual-landscape-shelves.webp` | Contact page supporting visual | Landscape stockroom crop, `3:2` |
+
+Rules:
+- Public brand imagery must be compressed WebP; keep source JPEG/HEIC/PNG files in `.asset-staging/brand-unused/`, which is ignored by git.
+- Product images stay in `public/products/` and should not be reused as brand/about/contact imagery.
+- Prefer horizontal exterior or warehouse images for wide narrative sections.
+- When replacing a live brand image, use a new public filename to avoid stale `next/image` and browser caches.
+
 ### Business Card (名片)
 
 **Size:** 80 × 54mm  
@@ -775,13 +792,12 @@ Minimum `44×44px` on mobile viewports. Icon buttons (`40×40px` visual) receive
 ### Homepage (Marketing)
 
 1. Sticky Navigation — `72px`, `z-index: 100`
-2. Hero — Full-width, `min-height: 560px`; H1 Cormorant Garamond 52px left-aligned; primary CTA; optional image right-column
-3. Brand Proposition Strip — 3-column Feature Cards ("一全 / 二多 / 三快"); `padding: 96px 0`
-4. New Arrivals Grid — H2 + 4-column product grid + CTA to Microstore
-5. Social Proof Strip — retailer logos or pull-quote in Cormorant Garamond italic
-6. Brand Story Module — full-bleed image left, text right; `padding: 96px 0`
-7. External-Store CTA — Brand Burgundy ground; ivory headline + "Shop on Our Store" secondary button (external link, `target="_blank"`)
-8. Footer — `#151212` ground, 4-column link grid + address
+2. Hero — two-column desktop layout; H1 Cormorant Garamond display scale; primary CTA to wholesale page, secondary CTA to external store; right image uses `BrandVisual` variant `hero`
+3. Brand Proposition Strip — 3-column values ("一全 / 二多 / 三快"); `padding: 96px 0`
+4. New Arrivals Grid — H2 + 4-product grid sourced from `content/products/` + CTA to Microstore
+5. Brand Story Module — image left using `BrandVisual` variant `story`, text right; `padding: 96px 0`
+6. External-Store CTA — Brand Burgundy ground; ivory headline + "Shop on Our Store" inverse button (external link, `target="_blank"`)
+7. Footer — `#151212` ground, responsive link grid + address
 
 ### Product Detail Page (Public, Display-Only)
 
@@ -794,7 +810,7 @@ Minimum `44×44px` on mobile viewports. Icon buttons (`40×40px` visual) receive
 ### About / Brand Story Page
 
 1. Hero text — legal-entity overline + Cormorant Garamond H1 subtitle
-2. Hero image — full-width 21:9 editorial photograph
+2. Hero image — full-width company exterior photograph using `visual-landscape-storefront.webp`, cropped to keep the facade, windows, entrance, fence, and ground visible
 3. Narrative columns — long-form copy in Inter 17px, `max-width: 720px`
 4. Values Grid — 3-column "一全 / 二多 / 三快" expanded description on ivory ground
 5. Focus list — numbered operating principles without unverified historical dates
@@ -804,8 +820,8 @@ Minimum `44×44px` on mobile viewports. Icon buttons (`40×40px` visual) receive
 ### Contact Page
 
 1. Page Header — H1 + supporting copy
-2. Two-column: contact details (address, email, phone, WhatsApp, business hours) left + local showroom/store image right
-3. Map embed (optional) — greyscale style
+2. Two-column: contact details (address, email, phone, WhatsApp, business hours) left + stockroom image right using `BrandVisual` variant `contact`
+3. Map embed remains optional and is not present in v1
 
 ---
 
@@ -820,33 +836,33 @@ Implementation is optimised for a **display-first marketing and product showcase
 | Framework | **Next.js 15 (App Router)** | Static export / ISR for marketing and product pages; fast SEO; `next/image` for editorial imagery; React Server Components keep bundle small |
 | Language | **TypeScript (strict)** | Type-safe product schema |
 | Styling | **Tailwind CSS v4** | Token-based; maps 1:1 to color / spacing (8px) / radius (2px) / type scales from Sections 2–5 |
-| UI Primitives | **shadcn/ui (Radix UI)** | Accessible primitives (focus rings, keyboard nav, ARIA) per Section 10 |
+| UI Primitives | **Local components + Radix where needed** | Accessible primitives (focus rings, keyboard nav, ARIA) per Section 10 without a full component framework dependency |
 | Icons | **Lucide React** | Matches 1.5px stroke weight in Section 7 |
 
 ### 12.2 Content & Data
 
 | Concern | Choice | Why |
 |---|---|---|
-| Product data | **MDX / JSON files in `content/products/`** (v1) | Version-controlled, no CMS overhead; migrate to **Sanity** when non-dev editing is required |
-| Forms | **React Hook Form + Zod** | Contact / wholesale-enquiry form only |
-| Form relay | **Resend** | Enquiry email delivery |
-| Images | **`next/image` + Cloudflare R2** | AVIF/WebP, responsive sizes, EU-proximate origin |
+| Product data | **JSON files in `content/products/`** (v1) | Version-controlled, no CMS overhead; migrate to a CMS only when non-dev editing is required |
+| Forms | **Direct contact links** | Contact page exposes email, phone, WhatsApp, and business hours; no local form submission in v1 |
+| Form relay | **None in v1** | No transactional email service is required while contact actions use external links |
+| Images | **`next/image` + local compressed WebP assets** | Brand images live in `public/brand/`; product images live in `public/products/<slug>/` |
 | Fonts | **`next/font` (self-hosted)** | Cormorant Garamond + Inter + JetBrains Mono; zero CLS |
 
 ### 12.3 Internationalisation
 
 | Concern | Choice |
 |---|---|
-| i18n | **next-intl** — `/pt` (default), `/en`, `/zh` |
+| i18n | **next-intl** with `localePrefix: "as-needed"` — Portuguese default has no prefix, English uses `/en`, Chinese uses `/zh` |
 | Currency | Not displayed on this site (prices live on storefront) |
 
 ### 12.4 External Integrations
 
 | Concern | Choice |
 |---|---|
-| Storefront link-out | Config-driven base URL (`NEXT_PUBLIC_STORE_URL`); each product has a `storeUrl` slug |
-| Analytics | **Plausible** (GDPR-clean, cookieless) |
-| Monitoring | **Sentry** |
+| Storefront link-out | Config-driven base URL (`NEXT_PUBLIC_STORE_URL`); product CTAs can use product-level `storeUrl` values |
+| Analytics | None in v1 |
+| Monitoring | None in v1 |
 
 ### 12.5 Deployment
 
@@ -861,10 +877,10 @@ Implementation is optimised for a **display-first marketing and product showcase
 | Concern | Choice |
 |---|---|
 | Package manager | **pnpm** |
-| Lint / format | **ESLint + Prettier + `prettier-plugin-tailwindcss`** |
-| Git hooks | **Husky + lint-staged** |
-| Testing | **Playwright** (smoke: home → product → outbound click) |
-| CI | **GitHub Actions** — lint, typecheck, preview deploy |
+| Lint / typecheck | **ESLint config + `tsc --noEmit`** |
+| Git hooks | None in v1 |
+| Testing | Manual browser smoke checks; Playwright can be used locally for visual verification when installed |
+| CI | Not configured in-repo yet |
 
 ### 12.7 Directory Structure
 
@@ -878,8 +894,8 @@ huangs/
 │       ├── contact/
 │       └── layout.tsx
 ├── components/
-│   ├── ui/                       # shadcn primitives
-│   ├── brand/                    # Logo, Wordmark
+│   ├── ui/                       # local UI primitives
+│   ├── brand/                    # Logo, Wordmark, BrandVisual
 │   ├── layout/                   # SiteHeader, SiteFooter
 │   └── products/                 # ProductCard, ProductGallery, ProductGrid
 ├── content/
@@ -888,11 +904,12 @@ huangs/
 │   ├── products.ts               # read + filter product data
 │   ├── i18n/                     # next-intl config
 │   └── site.ts                   # site-wide config (store URL, contact)
-├── styles/
-│   └── tokens.css                # CSS variables from Sections 2–5
 ├── messages/                     # pt.json, en.json, zh.json
-└── public/
-    └── products/                 # local product images by slug
+├── public/
+│   ├── brand/                    # logo files + compressed WebP brand photography
+│   └── products/                 # local product images by slug
+└── .asset-staging/
+    └── brand-unused/             # ignored raw / unused brand image candidates
 ```
 
 ### 12.8 Non-Goals (v1)
@@ -901,4 +918,4 @@ huangs/
 - No native mobile apps
 - No live chat widget
 - No multi-currency display; prices shown only on storefront
-- No custom CMS admin — MDX/JSON edits via PR
+- No custom CMS admin — JSON edits via PR

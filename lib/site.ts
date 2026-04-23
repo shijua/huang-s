@@ -12,8 +12,6 @@ export const siteConfig = {
   storeInfoUrl: "https://lua.microstore.app/#/shop/info",
   microstoreId: "618100",
   brandLogoUrl: "/brand/logo.jpg",
-  storefrontImageUrl: "/brand/storefront.jpg",
-  showroomImageUrl: "/brand/storefront.jpg",
   contactEmail:
     process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "huangssuporte@outlook.com",
   address: {

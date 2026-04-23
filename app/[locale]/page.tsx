@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import Image from "next/image";
 import { Link } from "@/lib/i18n/routing";
+import { BrandVisual } from "@/components/brand/brand-visual";
 import { Button } from "@/components/ui/button";
 import { ProductGrid } from "@/components/products/product-grid";
 import { getNewArrivals } from "@/lib/products";
@@ -54,17 +54,11 @@ export default async function HomePage({
             </div>
           </div>
 
-          <div className="relative aspect-[16/10] w-full max-w-[620px] overflow-hidden justify-self-end md:aspect-[16/11]">
-            <Image
-              src={siteConfig.storefrontImageUrl}
-              alt="HUANG'S Lua Cintilante storefront in Portugal"
-              fill
-              priority
-              quality={70}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
+          <BrandVisual
+            variant="hero"
+            priority
+            className="max-w-[620px] justify-self-end"
+          />
         </div>
       </section>
 
@@ -113,16 +107,7 @@ export default async function HomePage({
       <section className="bg-brand-beige">
         <div className="container-content py-24">
           <div className="grid gap-16 md:grid-cols-2 md:gap-20 items-center">
-            <div className="relative aspect-[16/10] w-full max-w-[620px] overflow-hidden">
-              <Image
-                src={siteConfig.storefrontImageUrl}
-                alt="HUANG'S Lua Cintilante exterior"
-                fill
-                quality={70}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
+            <BrandVisual className="max-w-[620px] justify-self-end" />
             <div>
               <p className="text-overline text-brand-burgundy mb-4">
                 {t("story.eyebrow")}
