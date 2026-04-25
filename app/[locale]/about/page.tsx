@@ -43,13 +43,16 @@ export default async function AboutPage({
       <section className="bg-ivory border-y border-line">
         <div className="container-content py-24">
           <h2 className="text-h2 mb-16">{tHome("values.title")}</h2>
-          <div className="grid gap-12 md:grid-cols-3">
+          <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
             {["0", "1", "2"].map((i) => (
-              <div key={i} className="border-t border-brand-burgundy pt-6">
-                <h3 className="text-h3 text-brand-burgundy mb-3">
+              <div key={i} className="border border-line bg-canvas p-8 lg:p-10">
+                <span className="font-serif text-[52px] font-light leading-none text-line">
+                  0{Number(i) + 1}
+                </span>
+                <h3 className="mt-4 text-h3 text-brand-charcoal">
                   {tHome(`values.items.${i}.title`)}
                 </h3>
-                <p className="text-[15px] text-ink-muted leading-relaxed">
+                <p className="mt-3 text-[15px] text-ink-muted leading-relaxed">
                   {tHome(`values.items.${i}.body`)}
                 </p>
               </div>

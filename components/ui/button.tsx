@@ -11,7 +11,7 @@ const buttonVariants = cva(
         primary:
           "bg-brand-burgundy text-ivory hover:bg-[#2d1108] active:bg-[#1e0b05]",
         secondary:
-          "bg-brand-beige text-brand-burgundy hover:bg-[#d8d3c1]",
+          "border border-brand-burgundy bg-transparent text-brand-burgundy hover:bg-brand-burgundy hover:text-ivory active:border-[#2a100a] active:bg-[#2a100a] active:text-ivory",
         ghost:
           "bg-transparent text-ink hover:bg-brand-beige/60 border border-line",
         link:
