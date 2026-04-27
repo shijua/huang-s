@@ -26,7 +26,7 @@ ls public/microstore     # ~50 jpg files
 cat content/microstore-feed.json | jq .count
 ```
 
-## Production server (cron, every 3 days)
+## Production server (cron, daily with jitter)
 
 ### 0. Prerequisites
 
@@ -64,11 +64,27 @@ and roughly 50 `MS_*.jpg` files in `~/huang-s/public/microstore/`.
 ssh server 'crontab -e'
 ```
 
-Add this line (every 3 days at 04:00 server time, UTC by default):
+Add this line (daily at 04:00 server time UTC + a random 0–60 min jitter):
 
 ```cron
-0 4 */3 * * cd /root/huang-s && /usr/bin/node scripts/sync-microstore.mjs >> /var/log/sync-microstore.log 2>&1
+0 4 * * * sleep $((RANDOM \% 3600)) && cd /root/huang-s && /usr/bin/node scripts/sync-microstore.mjs >> /var/log/sync-microstore.log 2>&1
 ```
+
+The `sleep $((RANDOM \% 3600))` part adds 0–3600 random seconds before the
+sync runs, so the actual fire time is somewhere between 04:00 and 05:00 UTC.
+This avoids hitting the microstore API at exactly the same minute every day
+(cleaner traffic pattern, harder to fingerprint as a bot).
+
+Notes:
+- `\%` is required — bare `%` inside a crontab line is treated as a newline
+  separator and would break the command. Always escape it.
+- `$RANDOM` is a bash builtin (0–32767). Cron usually invokes `/bin/sh`
+  which on Debian is `dash` and **does not have `$RANDOM`** — so wrap the
+  whole command in bash if your cron uses dash:
+  ```cron
+  0 4 * * * /bin/bash -c 'sleep $((RANDOM \% 3600)) && cd /root/huang-s && /usr/bin/node scripts/sync-microstore.mjs >> /var/log/sync-microstore.log 2>&1'
+  ```
+  Check with `ls -l /bin/sh` — if it points to `dash`, use the bash wrapper.
 
 If `which node` reports a different path (e.g. nvm install), substitute it.
 Avoid bare `node` in cron — cron's `$PATH` is minimal and won't find it.
