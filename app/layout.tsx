@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond } from "next/font/google";
 import { siteConfig } from "@/lib/site";
+import { getCurrentSeason } from "@/lib/season";
+import { SeasonDebugger } from "@/components/dev/season-debugger";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -9,6 +11,8 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   display: "swap",
 });
+
+export const revalidate = 21600;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -33,12 +37,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const season = getCurrentSeason();
   return (
     <html
       className={cormorant.variable}
+      data-season={season}
       suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        {process.env.NODE_ENV !== "production" && <SeasonDebugger />}
+      </body>
     </html>
   );
 }

@@ -57,7 +57,7 @@ export default async function HomePage({
           <BrandVisual
             variant="hero"
             priority
-            className="max-w-[620px] justify-self-end"
+            className="justify-self-center md:max-w-[620px] md:justify-self-end"
           />
         </div>
       </section>
@@ -110,7 +110,7 @@ export default async function HomePage({
       <section className="bg-brand-beige">
         <div className="container-content py-24">
           <div className="grid gap-16 md:grid-cols-2 md:gap-20 items-center">
-            <BrandVisual className="max-w-[620px] justify-self-end" />
+            <BrandVisual className="justify-self-center md:max-w-[620px] md:justify-self-end" />
             <div>
               <p className="text-overline text-brand-burgundy mb-4">
                 {t("story.eyebrow")}

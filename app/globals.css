@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand core colors — Section 2 */
+  /* Brand core colors — Section 2.
+     The deep tone (`brand-burgundy`) shifts subtly per season via [data-season]
+     overrides below. Default values here = autumn. The seasonal-accent slot
+     is a secondary editorial colour (overlines, dividers, hovers). */
   --color-brand-burgundy: #3a1810;
   --color-brand-beige: #e5e1d6;
   --color-brand-grey: #4a494a;
   --color-brand-charcoal: #151212;
+  --color-seasonal-accent: #9c5826;
 
   /* Surfaces & neutrals */
   --color-canvas: #f5f2ec;
@@ -55,6 +59,34 @@
   /* Container sizes */
   --container-content: 1280px;
   --container-prose: 720px;
+}
+
+/* Seasonal palette — four distinct hue families so each quarter reads
+   as a genuinely different collection, not just a micro-shift of the
+   house burgundy. Logo SVG keeps its hardcoded burgundy as the constant
+   brand anchor across all seasons.
+
+   Spring  Mar–May : laurel green   + saffron
+   Summer  Jun–Aug : Mediterranean cobalt + terracotta
+   Autumn  Sep–Nov : house burgundy + amber  (default)
+   Winter  Dec–Feb : anthracite black + champagne */
+
+[data-season="spring"] {
+  --color-brand-burgundy: #3f5a36;
+  --color-canvas: #f3f4ec;
+  --color-seasonal-accent: #b8843e;
+}
+
+[data-season="summer"] {
+  --color-brand-burgundy: #1e3a5a;
+  --color-canvas: #eff1ed;
+  --color-seasonal-accent: #c4724a;
+}
+
+[data-season="winter"] {
+  --color-brand-burgundy: #1a1a1a;
+  --color-canvas: #ececea;
+  --color-seasonal-accent: #a8916a;
 }
 
 /* Reset + base */
