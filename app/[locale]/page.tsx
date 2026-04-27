@@ -2,8 +2,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/lib/i18n/routing";
 import { BrandVisual } from "@/components/brand/brand-visual";
 import { Button } from "@/components/ui/button";
+import { MicrostoreGrid } from "@/components/products/microstore-grid";
 import { ProductGrid } from "@/components/products/product-grid";
 import { getNewArrivals } from "@/lib/products";
+import { getMicrostoreFeed } from "@/lib/microstore";
 import type { Locale } from "@/lib/i18n/config";
 import { siteConfig } from "@/lib/site";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
@@ -17,6 +19,7 @@ export default async function HomePage({
   setRequestLocale(locale);
   const t = await getTranslations("home");
 
+  const microstoreFeed = getMicrostoreFeed();
   const arrivals = getNewArrivals(4);
 
   return (
@@ -103,7 +106,15 @@ export default async function HomePage({
             <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
           </a>
         </div>
-        <ProductGrid products={arrivals} locale={locale} />
+        {microstoreFeed && microstoreFeed.items.length > 0 ? (
+          <MicrostoreGrid
+            items={microstoreFeed.items}
+            priorityCount={2}
+            closeLabel={t("collection.preview.close")}
+          />
+        ) : (
+          <ProductGrid products={arrivals} locale={locale} />
+        )}
       </section>
 
       {/* Brand story */}

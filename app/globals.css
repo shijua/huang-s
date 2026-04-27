@@ -240,4 +240,13 @@
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
   }
+
+  .ms-fade-in {
+    animation: ms-fade-in 0.2s ease-out;
+  }
+
+  @keyframes ms-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 }

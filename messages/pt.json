@@ -25,7 +25,10 @@
     "collection": {
       "eyebrow": "Coleção",
       "title": "O edit actual.",
-      "cta": "Ver na loja online"
+      "cta": "Ver na loja online",
+      "preview": {
+        "close": "Fechar"
+      }
     },
     "story": {
       "eyebrow": "A nossa história",

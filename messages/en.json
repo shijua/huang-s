@@ -25,7 +25,10 @@
     "collection": {
       "eyebrow": "Collection",
       "title": "The current edit.",
-      "cta": "View on Microstore"
+      "cta": "View on Microstore",
+      "preview": {
+        "close": "Close"
+      }
     },
     "story": {
       "eyebrow": "Our story",

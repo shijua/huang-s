@@ -25,7 +25,10 @@
     "collection": {
       "eyebrow": "当季系列",
       "title": "当季焦点",
-      "cta": "前往微店查看"
+      "cta": "前往微店查看",
+      "preview": {
+        "close": "关闭"
+      }
     },
     "story": {
       "eyebrow": "品牌故事",
